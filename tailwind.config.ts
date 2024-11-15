@@ -8,9 +8,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        roboto:['Roboto', 'serif'],
+        poppins:['Poppins', 'serif']
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        biru: '#2F55D4'
       },
     },
   },
