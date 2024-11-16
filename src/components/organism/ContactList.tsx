@@ -8,9 +8,6 @@ const ContactList = () => {
                 <div className="rounded-lg bg-gray-300 shadow-xl h-full ">
                     TEXT
                 </div>
-                <div className="rounded-lg bg-gray-300 shadow-xl h-full ">
-                    TEXT
-                </div>
             </div>
         </div>
     )

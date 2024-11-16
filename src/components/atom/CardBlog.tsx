@@ -3,8 +3,9 @@ import Link from "next/link";
 const CardBlog = () => {
   return (
     <Link
+    prefetch={true}
       href={"/"}
-      className="w-full min-h-[450px] lg:min-h-[550px] py-5 px-3 hover:py-2 rounded-t-lg"
+      className="w-full min-h-[400px] lg:min-h-[400px] py-5 px-3 hover:py-2 rounded-t-lg"
     >
       <div className="border-2 border-gray-100 w-full h-full rounded-lg flex flex-col">
         <div className="w-full h-[60%] relative -z-10">
@@ -33,13 +34,13 @@ const CardBlog = () => {
               sequi quisquam, labore alias!
             </p>
           </div>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <div className="w-12 h-12 rounded-full bg-biru"></div>
             <div className="flex flex-col">
               <p className="font-semibold text-lg">Nama Publisher</p>
               <p className="text-gray-500">Tanggal Terbit</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>

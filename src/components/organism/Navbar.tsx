@@ -62,7 +62,7 @@ const Navbar = () => {
       ],
     },
     { title: "Contact", href: "/contact" },
-    { title: "About Us", href: "/about-us" },
+    { title: "About Us", href: "/tentang-kami" },
   ];
   return (
     <header
@@ -95,19 +95,20 @@ const Navbar = () => {
                 }
               }}
             >
-              <Link href={item.href}>
+              <Link prefetch={true} href={item.href}>
                 <p>{item.title}</p>
               </Link>
               {item.submenu && showDropdown && (
                 <div className="absolute flex flex-row p-4 gap-10 bg-white rounded shadow-xl l text-gray-700 mt-2">
                   {item.submenu.map((subitem, index) => (
                     <div className="flex flex-col gap-4" key={index}>
-                      <Link href={subitem.href} className="hover:text-blue-500">
+                      <Link prefetch={true} href={subitem.href} className="hover:text-blue-500">
                         {subitem.category}
                       </Link>
                       <div className="flex flex-col gap-1 text-gray-500 min-w-24 text-sm">
                         {subitem.theme?.map((theme, index) => (
                           <Link
+                            prefetch={true}
                             className="text-gray-500 hover:text-biru"
                             key={index}
                             href={`/blog/${subitem.category.toLowerCase()}/${theme.toLowerCase()}`}
