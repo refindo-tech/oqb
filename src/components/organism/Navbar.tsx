@@ -24,7 +24,7 @@ const Navbar = () => {
   useEffect(()=>{
     const dynamicStyle = () => {
       if(isScroll){
-        setStyleNavbar("bg-white text-gray-700 shadow-xl")
+        setStyleNavbar("bg-navy text-greenWhite shadow-xl")
       }
       else if(isScroll && isShowHamburger){
         setStyleNavbar("bg-gray-700 text-white")
@@ -66,24 +66,20 @@ const Navbar = () => {
   ];
   return (
     <header
-      className={`w-full flex ${styleNavbar} justify-center h-20 fixed top-0 transition-all ease-in-out duration-1000`}
+      className={`w-full flex ${styleNavbar} justify-center h-20 fixed top-0 left-0 right-0 transition-all ease-in-out duration-1000 z-20`}
     >
-      <nav className="min-w-[70%] h-full flex justify-between items-center z-20 font-poppins tracking-wide">
+      <nav className="min-w-[70%] h-full flex justify-between items-center font-poppins tracking-wide">
         <Image
-          src={"/images/logo_oqb.png"}
-          width={60}
-          height={60}
+          src={"/images/assets/oqbbright.png"}
+          width={90}
+          height={90}
           alt="logo_oqb"
         />
         <div className="lg:flex flex-row gap-8 font-semibold hidden">
           {menu.map((item, index) => (
             <div
               key={index}
-              className={`${
-                isScroll
-                  ? "text-gray-700 hover:text-blue-500 hover:py-2 hover:border-b-2 hover:border-b-blue-500"
-                  : "text-white/50 hover:text-white/100 hover:py-2 hover:border-b-2 hover:border-b-white"
-              } py-3 relative`}
+              className={`text-greenWhite hover:py-2 hover:border-b-2 hover:border-greenWhite py-3 relative`}
               onMouseEnter={() => {
                 if (item.submenu) {
                   setShowDropdown(true);
@@ -99,17 +95,17 @@ const Navbar = () => {
                 <p>{item.title}</p>
               </Link>
               {item.submenu && showDropdown && (
-                <div className="absolute flex flex-row p-4 gap-10 bg-white rounded shadow-xl l text-gray-700 mt-2">
+                <div className="absolute flex flex-row p-4 gap-10 bg-[#1c1678] rounded shadow-xl text-blueWhite mt-2">
                   {item.submenu.map((subitem, index) => (
                     <div className="flex flex-col gap-4" key={index}>
-                      <Link prefetch={true} href={subitem.href} className="hover:text-blue-500">
+                      <Link prefetch={true} href={subitem.href} className="">
                         {subitem.category}
                       </Link>
-                      <div className="flex flex-col gap-1 text-gray-500 min-w-24 text-sm">
+                      <div className="flex flex-col gap-1 text-blueWhite min-w-24 text-sm">
                         {subitem.theme?.map((theme, index) => (
                           <Link
                             prefetch={true}
-                            className="text-gray-500 hover:text-biru"
+                            className=""
                             key={index}
                             href={`/blog/${subitem.category.toLowerCase()}/${theme.toLowerCase()}`}
                           >

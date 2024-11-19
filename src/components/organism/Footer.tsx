@@ -1,12 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 const Footer = () => {
   return (
-    <footer className="min-h-[60vh] w-full bg-[#202942] flex flex-col justify-between items-center text-white py-20 gap-10">
+    <footer className="min-h-[60vh] w-full bg-[#1c1678] flex flex-col justify-between items-center text-white py-20 gap-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] gap-10">
         <div id="detail-perusahaan-footer" className="flex flex-col gap-5">
-          <div className="bg-slate-100 rounded-lg h-16 w-full text-black">
+          {/* <div className="bg-slate-100 rounded-lg h-16 w-full text-black">
             LOGO
-          </div>
+          </div> */}
+          <Image 
+            src={'/images/assets/oqbbright.png'}
+            alt="logooqb"
+            height={160}
+            width={160}
+          />
           <div className="flex flex-col">
             <h4 className="font-semibold text-lg">PT.OQB Software House</h4>
             <p className="font-poppins text-white/70">

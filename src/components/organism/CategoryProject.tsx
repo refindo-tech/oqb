@@ -1,7 +1,7 @@
 import ProjectPercentage from "@/components/atom/ProjectPrercentage"
 const CategoryProject = () => {
     return (
-        <article className="min-h-[60vh] w-full flex  justify-center py-10">
+        <article className=" w-full flex  justify-center py-10">
             <div className="w-[80%] h-full rounded-lg bg-biru p-10 grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-5 lg:gap-y-10">
                 <ProjectPercentage title={"Web Design"} percent={90}/>
                 <ProjectPercentage title={"Web Development"} percent={90}/>

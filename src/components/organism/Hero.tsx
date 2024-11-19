@@ -3,17 +3,17 @@ import ButtonComponent from "@/components/atom/Button";
 // import Image from "next/image";
 const HeroComponent = () => {
   return (
-    <div className="min-h-[80vh] bg-biru py-20 flex justify-center w-full">
+    <div className="h-screen bg-navy pt-28 lg:pt-20 pb-20 flex justify-center w-full">
         <div className="flex flex-col items-center justify-center text-center gap-10 text-white/70">
-          <h1 className="text-7xl font-bold font-roboto text-white">
+          <h1 className="text-5xl lg:text-7xl font-bold font-roboto text-greenWhite">
           Build Quality Software <br /> Optimize Your Workflow
           </h1>
-          <p className="font-poppins text-xl">
+          <p className="font-poppins text-xl px-3 text-blueWhite">
             We believe that software should do more than just function, it should inspire progress
           </p>
           <ButtonComponent
             content={"Start Consultation"}
-            propsClass="bg-orange-500 font-semibold w-52 h-[56px] rounded-2xl"
+            propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy "
           />
         </div>
       {/* <div className="w-[80%] flex  items-center">

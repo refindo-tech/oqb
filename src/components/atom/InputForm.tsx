@@ -3,7 +3,7 @@ const InputForm : React.FC<{type:string; placeholder:string; autoFocus?:boolean}
     return(
         <input 
             type = {type}
-            className="h-8 border-orange-500 p-2 w-full rounded"
+            className="h-12 border-orange-500 p-5 w-full rounded bg-white/30 backdrop-blur-sm placeholder:text-white font-poppins placeholder:font-semibold text-white"
             placeholder= {placeholder}
             autoFocus={autoFocus}
         />
