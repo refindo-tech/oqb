@@ -1,31 +1,32 @@
 import React from "react";
 import ButtonComponent from "@/components/atom/Button";
 // import Image from "next/image";
-const HeroComponent = () => {
+interface propsHeroCompoonents {
+  path:string
+  title:React.ReactNode; // Mendukung string atau JSX
+  description:string
+}
+const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}) => {
   return (
-    <div className="h-screen bg-navy pt-28 lg:pt-20 pb-20 flex justify-center w-full">
-        <div className="flex flex-col items-center justify-center text-center gap-10 text-white/70">
-          <h1 className="text-5xl lg:text-7xl font-bold font-roboto text-greenWhite">
-          Build Quality Software <br /> Optimize Your Workflow
+    // bg-gradient-to-t from-greenWhite/20 to-transparent
+    <div 
+      className={`h-screen pt-28 bg-cover lg:pt-20 pb-20 flex justify-center w-full`}
+      style={{
+        backgroundImage: `url(${path})`, // Gunakan style inline untuk background-image
+      }}
+    >
+        <div className="w-[80%] flex flex-col items-start justify-center gap-10 text-white/70">
+          <h1 className="text-3xl lg:text-7xl font-bold font-roboto text-greenWhite px-3">
+            {title}
           </h1>
           <p className="font-poppins text-xl px-3 text-blueWhite">
-            We believe that software should do more than just function, it should inspire progress
+            {description}
           </p>
           <ButtonComponent
             content={"Start Consultation"}
             propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy "
           />
         </div>
-      {/* <div className="w-[80%] flex  items-center">
-        <div className="min-w-[50%]">
-          <Image
-            src={'/images/logo_oqb.png'}
-            alt="hero-image"
-            width={600}
-            height={600}
-          />
-        </div>
-      </div> */}
     </div>
   );
 };

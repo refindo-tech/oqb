@@ -3,13 +3,13 @@ import CountProject from "@/components/atom/CountProject";
 const SectorProject = () => {
   return (
     <div className="min-h-[70vh] w-full flex justify-center items-center py-10">
-      <div className="flex w-[90%] lg:w-[80%] gap-10 flex-wrap-reverse lg:flex-nowrap">
+      <div className="flex items-center w-[90%] lg:w-[80%] gap-10 flex-wrap-reverse lg:flex-nowrap">
         <CountProject />
         <div className="w-full lg:w-[50%] min-h-[50vh] flex flex-col gap-4 text-center">
-          <h2 className="text-4xl font-bold text-[#202942]">
+          <h2 className="text-5xl font-bold text-greenWhite">
             Partner In Your Vision
           </h2>
-          <p className="">
+          <p className="text-blueWhite text-lg">
             OQB is a software house that stands at
             the crossroads of innovation and reliability. We don’t just build
             software; we create tailored digital solutions designed to optimize
@@ -26,22 +26,22 @@ const SectorProject = () => {
             workflows, and support innovation.
           </p>
           <div className="flex gap-5 flex-wrap">
-            <div className="flex justify-center w-[80%] gap-10 mx-auto">
+            <div className="flex justify-center w-[80%] gap-12 mx-auto">
               <Image
-                src={"/images/nextjs.svg"}
-                alt="texhnolugy used"
+                src={"/images/nextjs.webp"}
+                alt="technolugy used"
                 width={60}
                 height={60}
               />
               <Image
                 src={"/images/file-type-vue.svg"}
-                alt="texhnolugy used"
+                alt="technolugy used"
                 width={60}
                 height={60}
               />
               <Image
                 src={"/images/laravel.svg"}
-                alt="texhnolugy used"
+                alt="technolugy used"
                 width={60}
                 height={60}
               />
@@ -49,19 +49,19 @@ const SectorProject = () => {
             <div className="flex justify-center w-[80%] gap-10 mx-auto">
               <Image
                 src={"/images/file-type-kotlin.svg"}
-                alt="texhnolugy used"
+                alt="technolugy used"
                 width={60}
                 height={60}
               />
               <Image
                 src={"/images/flutter.png"}
-                alt="texhnolugy used"
+                alt="technolugy used"
                 width={60}
                 height={60}
               />
               <Image
                 src={"/images/figma.svg"}
-                alt="texhnolugy used"
+                alt="technolugy used"
                 width={60}
                 height={60}
               />

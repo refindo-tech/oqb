@@ -1,12 +1,17 @@
 import Image from "next/image";
 import React from "react";
 import ButtonComponent from "@/components/atom/Button";
-const CardService:React.FC<{theme:string;}> = ({theme}) => {
+interface propsCardService {
+  theme:string,
+  path:string
+}
+const CardService:React.FC<propsCardService> = ({theme, path}) => {
   return (
-    <div className="relative h-[300px]">
+    // h-[300px] md:h-[350px] lg:h-[400px]
+    <div className="relative h-[300px] md:h-[350px] lg:h-[400px]">
       <div className="absolute rounded-lg shadow-xl h-full w-full">
         <Image
-          src="/images/card-image/thumbnail1.jpg"
+          src={path}
           alt="thumbnail-card"
           fill // Menyebarkan gambar sepenuhnya
           sizes="100vw" // Untuk responsivitas optimal
@@ -17,6 +22,13 @@ const CardService:React.FC<{theme:string;}> = ({theme}) => {
           }}
         />
       </div>
+      {/* <Image
+          src={path}
+          alt="thumbnail-card"
+          height={800}
+          width={600}
+          // className="block absolute top-0 left-0 right-0 bottom-0 h-[800px] w-[600px]"
+        /> */}
       <div className="absolute top-0 left-0 right-0 bottom-0 h-full w-full flex flex-col justify-center p-5 bg-gray-900/70 hover:bg-navy/80 gap-7">
         <h1 className="font-semibold text-5xl text-greenWhite">{theme}</h1>
         <div className="flex gap-4 justify-center">

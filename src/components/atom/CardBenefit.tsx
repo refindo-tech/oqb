@@ -15,7 +15,7 @@ const CardBenefit: React.FC<{ title: string; description: string; path:string }>
     <div
       onMouseEnter={hoverHandler}
       onMouseLeave={hoverHandler}
-      className={`rounded-full h-[300px] w-[300px] text-center ${isHover ? 'bg-greenWhite backdrop-blur-lg text-navy font-semibold': 'bg-transparent border-4 border-blueWhite'} p-10 flex flex-col justify-center items-center gap-3 transition-all  duration-1000`}
+      className={`rounded-full h-[300px] w-[300px] text-center ${isHover ? 'bg-greenWhite backdrop-blur-lg text-navy font-semibold': 'bg-transparent border-4 border-blueWhite'} p-10 flex flex-col justify-center items-center gap-3 transition-all ease-out duration-1000`}
     >
       {!isHover&&
         // <div className="bg-biru h-20 w-20 rounded-lg"></div>

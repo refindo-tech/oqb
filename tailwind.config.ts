@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      animation:{
+        'infinite-scroll': 'infinite-scroll 10s linear infinite'
+      },
       fontFamily:{
         roboto:['Roboto', 'serif'],
         poppins:['Poppins', 'serif']

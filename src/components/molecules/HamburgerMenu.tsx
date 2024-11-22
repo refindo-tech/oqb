@@ -13,7 +13,7 @@ const HamburgerMenu: React.FC<{
         {isShowMenu ? (
           <X color={`${isScroll ? "#000000" : "#FFFFFF"}`} />
         ) : (
-          <Menu color={`${isScroll ? "#000000" : "#FFFFFF"}`} />
+          <Menu color={`${isScroll ? "#FFFFFF" : "#FFFFFF"}`} />
         )}
       </button>
       {isShowMenu && (

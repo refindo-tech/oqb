@@ -46,17 +46,14 @@ const Navbar = () => {
       submenu: [
         {
           category: "Teknologi",
-          href: "/blog/teknologi",
           theme: ["Programming", "Database", "Cloud & Infrastructure"],
         },
         {
           category: "Marketing",
-          href: "/blog/marketing",
           theme: ["Periklanan", "Tips dan trik", "Info terkini"],
         },
         {
           category: "Lifestyle",
-          href: "/blog/lifestyle",
           theme: ["Olahraga", "Kesehatan", "Terapi"],
         },
       ],
@@ -98,16 +95,16 @@ const Navbar = () => {
                 <div className="absolute flex flex-row p-4 gap-10 bg-[#1c1678] rounded shadow-xl text-blueWhite mt-2">
                   {item.submenu.map((subitem, index) => (
                     <div className="flex flex-col gap-4" key={index}>
-                      <Link prefetch={true} href={subitem.href} className="">
+                      <h2 className="text-greenWhite">
                         {subitem.category}
-                      </Link>
+                      </h2>
                       <div className="flex flex-col gap-1 text-blueWhite min-w-24 text-sm">
                         {subitem.theme?.map((theme, index) => (
                           <Link
                             prefetch={true}
-                            className=""
+                            className="hover:text-greenWhite"
                             key={index}
-                            href={`/blog/${subitem.category.toLowerCase()}/${theme.toLowerCase()}`}
+                            href={`/news/${theme.toLowerCase()}`}
                           >
                             {theme}
                           </Link>

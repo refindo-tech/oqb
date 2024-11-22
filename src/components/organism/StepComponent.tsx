@@ -108,9 +108,9 @@ const ProjectPhases = () => {
   ];
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-8 py-20 hidden lg:block">
-      <h2 className="text-4xl font-roboto font-semibold text-center mb-16 text-greenWhite">Project Phases</h2>
-      <div className="relative -z-10">
+    <div className="w-full max-w-[1200px] mx-auto px-8 py-20 hidden lg:block bg-transparent">
+      <h2 className="text-5xl font-roboto font-semibold text-center mb-16 text-greenWhite">Project Phases</h2>
+      <div className="relative">
         <ConnectorLines />
         {/* First Row */}
         <div className="flex flex-col md:flex-row justify-between px-5 mb-9 relative z-10">

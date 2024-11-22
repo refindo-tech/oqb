@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "PT. OQB Software House",
   description:
-    "PT. OQB Software House merupakan sebuah perusahaan yang berfokus dalam pembuatan perangkat lunak",
+    "PT. OQB Software House merupakan sebuah perusahaan yang berfokus dalam pembuatan perangkat lunak"
 };
 
 export default function RootLayout({
