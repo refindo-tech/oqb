@@ -1,4 +1,6 @@
+'use client'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import ButtonComponent from "@/components/atom/Button";
 interface propsCardService {
@@ -6,6 +8,10 @@ interface propsCardService {
   path:string
 }
 const CardService:React.FC<propsCardService> = ({theme, path}) => {
+  const router = useRouter()
+  const handleButton = () => {
+    router.push('/contact#contact')
+  }
   return (
     // h-[300px] md:h-[350px] lg:h-[400px]
     <div className="relative h-[300px] md:h-[350px] lg:h-[400px]">
@@ -32,8 +38,8 @@ const CardService:React.FC<propsCardService> = ({theme, path}) => {
       <div className="absolute top-0 left-0 right-0 bottom-0 h-full w-full flex flex-col justify-center p-5 bg-gray-900/70 hover:bg-navy/80 gap-7">
         <h1 className="font-semibold text-5xl text-greenWhite">{theme}</h1>
         <div className="flex gap-4 justify-center">
-          <ButtonComponent content={"Design"} propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy"/>
-          <ButtonComponent content={"Development"} propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy"/>
+          <ButtonComponent onClick={handleButton} content={"Design"} propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy"/>
+          <ButtonComponent onClick={handleButton} content={"Development"} propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy"/>
         </div>
       </div>
     </div>

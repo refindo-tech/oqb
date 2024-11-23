@@ -10,11 +10,12 @@ const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}
   return (
     // bg-gradient-to-t from-greenWhite/20 to-transparent
     <div 
-      className={`h-screen pt-28 bg-cover lg:pt-20 pb-20 flex justify-center w-full`}
+      className={`h-screen bg-center bg-cover bg-fixed`}
       style={{
         backgroundImage: `url(${path})`, // Gunakan style inline untuk background-image
       }}
     >
+      <div className="w-full h-full flex justify-center bg-black/20 lg:pt-20 pb-20 pt-28">
         <div className="w-[80%] flex flex-col items-start justify-center gap-10 text-white/70">
           <h1 className="text-3xl lg:text-7xl font-bold font-roboto text-greenWhite px-3">
             {title}
@@ -27,6 +28,7 @@ const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}
             propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy "
           />
         </div>
+      </div>
     </div>
   );
 };

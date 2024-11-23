@@ -40,6 +40,7 @@ const Navbar = () => {
   };
   const menu = [
     { title: "Home", href: "/" },
+    { title:'Services', href:'/profile#services'},
     {
       title: "News",
       href: "/news",
@@ -63,13 +64,13 @@ const Navbar = () => {
   ];
   return (
     <header
-      className={`w-full flex ${styleNavbar} justify-center h-20 fixed top-0 left-0 right-0 transition-all ease-in-out duration-1000 z-20`}
+      className={`w-full flex ${styleNavbar} justify-center h-16 fixed top-0 left-0 right-0 transition-all ease-in-out duration-1000 z-20`}
     >
       <nav className="min-w-[70%] h-full flex justify-between items-center font-poppins tracking-wide">
         <Image
           src={"/images/assets/oqbbright.png"}
-          width={90}
-          height={90}
+          width={70}
+          height={70}
           alt="logo_oqb"
         />
         <div className="lg:flex flex-row gap-8 font-semibold hidden">

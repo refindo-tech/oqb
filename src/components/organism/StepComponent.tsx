@@ -108,7 +108,7 @@ const ProjectPhases = () => {
   ];
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-8 py-20 hidden lg:block bg-transparent">
+    <div className="w-full max-w-[1200px] mx-auto px-8 py-20 hidden lg:block">
       <h2 className="text-5xl font-roboto font-semibold text-center mb-16 text-greenWhite">Project Phases</h2>
       <div className="relative">
         <ConnectorLines />
@@ -118,7 +118,6 @@ const ProjectPhases = () => {
             <ProjectPhase key={phase.number} {...phase} />
           ))}
         </div>
-
         {/* Second Row */}
         <div className="flex flex-col md:flex-row-reverse justify-between pr-5 pl-10 mb-10 relative z-10">
           {phases.slice(4, 7).map((phase) => (
@@ -126,7 +125,6 @@ const ProjectPhases = () => {
           ))}
           {/* <div className="md:w-48" /> Spacer for alignment */}
         </div>
-
         {/* Third Row */}
         <div className="flex flex-col md:flex-row pl-10 justify-between relative z-10">
           {phases.slice(7).map((phase) => (

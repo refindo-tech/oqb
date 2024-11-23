@@ -9,13 +9,13 @@ const Footer = () => {
             LOGO
           </div> */}
           <Image 
-            src={'/images/assets/oqbbright.png'}
+            src={'/images/assets/croped_logo.png'}
             alt="logooqb"
             height={160}
             width={160}
           />
           <div className="flex flex-col">
-            <h4 className="font-semibold text-lg">PT.OQB Software House</h4>
+            <h4 className="font-semibold text-lg">PT. OQB Software House</h4>
             <p className="font-poppins text-white/70">
               Jalan Villa Tangerang Elok, Kec. Pasar Kemis, Kab. Tangerang,
               Banten, 15560
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
         <div id="layanan-footer" className="flex flex-col gap-5 text-white">
-          <h5 className="text-white font-semibold text-4xl">Layanan</h5>
+          <h5 className="text-white font-semibold text-4xl">Services</h5>
           <div className="flex flex-col gap-2 text-white/70">
             <Link href={"/"}>Website Design & Development</Link>
             <Link href={"/"}>Mobile App Design & Development</Link>
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div id="contact-footer" className="flex flex-col gap-5 text-white">
-          <h5 className="text-white font-semibold text-4xl">Blog</h5>
+          <h5 className="text-white font-semibold text-4xl">Insights</h5>
           <div className="flex flex-col gap-2">
             <h6 className="font-semibold">Technology</h6>
             <p className="text-white/70">
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div>Copyright PT. OQB Software House</div>
+      <div>Copyright @ PT. OQB Software House</div>
     </footer>
   );
 };
