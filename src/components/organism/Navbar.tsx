@@ -42,8 +42,8 @@ const Navbar = () => {
     { title: "Home", href: "/" },
     { title:'Services', href:'/profile#services'},
     {
-      title: "News",
-      href: "/news",
+      title: "Insight",
+      href: "/insight",
       submenu: [
         {
           category: "Teknologi",

@@ -1,7 +1,7 @@
 import CardTestimoni from "@/components/molecules/CardTestimoni";
 const ClientTestimoni = () => {
   return (
-    <div className="w-full flex justify-center items-center py-20 gap-10">
+    <div className="w-full flex justify-center items-center pt-20 gap-10">
       <div className="flex flex-wrap lg:flex-nowrap justify-between gap-y-10 w-[80%]">
         <div className="flex flex-col gap-5">
           <h2 className="font-semibold text-4xl font-poppins text-greenWhite">

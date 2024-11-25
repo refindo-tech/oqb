@@ -4,7 +4,7 @@ const ServiceOffer = () => {
   return (
     <div
         id="services"
-        className="bg-navy min-h-[70vh] flex flex-col items-center justify-center gap-10 text-center py-20 text-gray-600"
+        className="bg-navy min-h-[70vh] flex flex-col items-center justify-center gap-10 text-center py-40 text-gray-600"
     >
       <h2 className="text-5xl font-semibold font-roboto text-greenWhite">
         Our Services

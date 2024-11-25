@@ -4,12 +4,13 @@ import Navbar from "@/components/organism/Navbar";
 import ServiceOffer from "@/components/organism/ServicesOffer";
 import SliderIcon from "@/components/molecules/SliderIcon";
 import ClientTestimoni from "@/components/organism/ClientTestimoni";
-import ContactForm from "@/components/organism/ContactForm";
+import FormContact from "@/components/organism/FormContact";
 import ProjectPhases from "@/components/organism/StepComponent";
 import Footer from "@/components/organism/Footer";
 import LastBlog from "@/components/organism/LastBlog";
 import VisionComponent from "@/components/organism/Vision";
 import Benefit from "@/components/organism/Benefit";
+import WhatsappButton from "@/components/molecules/WhatsappButton";
 const HomePage = () => {
   return (
     <>
@@ -25,19 +26,22 @@ const HomePage = () => {
       />
       {/* <HeroComponent /> */}
       <ServiceOffer />
-        <div className=" bg-[url('/images/assets/why_choose_us.jpg')] bg-cover bg-fixed min-h-screen">
-          {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-transparent">
+      <div className=" bg-[url('/images/assets/why_choose_us.jpg')] bg-cover bg-fixed min-h-screen">
+        {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-transparent">
           </div> */}
-          <div className="bg-black/50 p-10">
-            <Benefit />
-            <ProjectPhases />
-          </div>
+        <div className="bg-black/50 px-10 py-16">
+          <Benefit />
+          <ProjectPhases />
         </div>
-      <VisionComponent />
-      <SliderIcon />
-      <ClientTestimoni />
+      </div>
+      <div className="flex flex-col py-40">
+        <VisionComponent />
+        <SliderIcon />
+        <ClientTestimoni />
+      </div>
       <LastBlog />
-      <ContactForm />
+      <FormContact />
+      <WhatsappButton />
       <Footer />
     </>
   );

@@ -3,7 +3,6 @@ class Blog {
     listBlog = async () =>{
         try {
             const getListBlog = await db.blog.findMany()
-            console.log(getListBlog)
             return{
                 code:200,
                 message: "Get List Blog Success",

@@ -16,7 +16,7 @@ const ClientSlider = () => {
   // }, []);
 
   return (
-    <div className="w-full h-[60vh] flex flex-col gap-10 items-center justify-center">
+    <div className="w-full h-[30vh] flex flex-col gap-10 items-center justify-center">
       <h1 className="font-poppins font-bold text-greenWhite text-5xl">
         Our Client
       </h1>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 const VisionComponent = () => {
   return (
-    <div className="min-h-[60vh] w-full flex flex-col items-center py-10">
+    <div className="w-full flex flex-col items-center mb-20 gap-5">
       <div className="w-[80%] flex flex-wrap items-center xl:flex-nowrap gap-10">
         <div className="relative w-full xl:w-[50%] h-[40vw] xl:h-[40vh] rounded-2xl shadow-xl">
           <div className="absolute w-full h-full">

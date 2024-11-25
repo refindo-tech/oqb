@@ -10,12 +10,12 @@ const CardBlog:React.FC<propsCardBlog> = ({title, description, slug}) => {
   return (
     <Link
       prefetch={true}
-      href={`/news/${slug}`}
+      href={`/insight/${slug}`}
       className="w-full min-h-[350px] lg:min-h-[400px] py-5 px-3 hover:py-2 hover:px-0 rounded-t-lg"
     >
       <div className="w-full h-full rounded-lg flex flex-col">
         <div className="w-full h-[100%] relative -z-10">
-          <div className="rounded absolute w-full h-full">
+          <div className="rounded-lg absolute w-full h-full">
             <Image
               src="/images/assets/card-image/thumbnail1.jpg"
               alt="thumbnail-card"

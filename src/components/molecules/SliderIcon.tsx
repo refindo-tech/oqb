@@ -19,7 +19,7 @@ const SliderIcon = () => {
         >
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/mya.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -27,7 +27,7 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/my_beautica.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -35,7 +35,7 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/netplus_connection.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -43,7 +43,7 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/y_irsyadul_ibad.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -51,7 +51,7 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/untirta.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -72,7 +72,7 @@ const SliderIcon = () => {
         >
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/isuzu.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -80,7 +80,7 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/myg.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -88,7 +88,7 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/my_academy.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -96,7 +96,7 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/p_kota_serang.png"}
               alt="client-logo"
               width={120}
               height={120}
@@ -104,7 +104,23 @@ const SliderIcon = () => {
           </li>
           <li>
             <Image
-              src={"/images/logo_oqb.png"}
+              src={"/images/assets/client-logo/sdit_irsyadul_ibad_2.png"}
+              alt="client-logo"
+              width={120}
+              height={120}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/images/assets/client-logo/Kedaireka.png"}
+              alt="client-logo"
+              width={120}
+              height={120}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/images/assets/client-logo/sman_3_kota_serang.png"}
               alt="client-logo"
               width={120}
               height={120}

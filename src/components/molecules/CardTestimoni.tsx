@@ -29,7 +29,7 @@ const CardTestimoni: React.FC<propsCardTestimony> = ({
             <p className="text-blueWhite">{text}</p>
           </div>
           <div className="flex flex-col">
-            <h5 className="font-semibold text-lg text-blueWhite">{name}</h5>
+            <h5 className="font-bold text-lg text-blueWhite">{name}</h5>
             <h6 className=" text-blueWhite">{position}</h6>
           </div>
         </div>
