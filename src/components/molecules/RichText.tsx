@@ -57,6 +57,7 @@ const QuillEditor: React.FC<QuillEditorProps> = ({ value, onChange }) => {
     //   formats={formats}
       onChange={onChange}
       value={value}
+      className=""
     />
   );
 };

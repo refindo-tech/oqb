@@ -19,9 +19,10 @@ model Blog {
   slug        String          @db.VarChar(255)
   description String          @db.VarChar(255)
   content     String          @db.LongText
-  tags        String          @db.VarChar(255)
-  creator     String          @db.VarChar(255)
+  tags        String?         @db.VarChar(255)
+  creator     String?         @db.VarChar(255)
   category    CategoryContent
+  thumbnail   String?         @db.LongText
   created_at  DateTime        @default(now())
   updated_at  DateTime        @default(now()) @updatedAt
 }

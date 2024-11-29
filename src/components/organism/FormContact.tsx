@@ -9,30 +9,30 @@ import Link from "next/link";
 import {sendEmail} from '../../utils/lib/fetchContact'
 
 const FormContact = () => {
-  const [emailValue, setEmailValue] = useState<string | number | null>(null);
-  const [nameValue, setNameValue] = useState<string | number | null>(null);
-  const [phoneValue, setPhoneValue] = useState<string | number | null>(null);
-  const [companyValue, setCompanyValue] = useState<string | number | null>(
-    null
+  const [emailValue, setEmailValue] = useState<string|number| File|null>('');
+  const [nameValue, setNameValue] = useState<string|number| File|null>('');
+  const [phoneValue, setPhoneValue] = useState<string|number| File|null>('');
+  const [companyValue, setCompanyValue] = useState<string|number| File|null>(
+    ''
   );
   const [messageValue, setMessageValue] = useState<string | number | null>(
-    null
+    ''
   );
   const [dataRequest, setDataRequest] = useState<{
-    name: string | number | null;
-    email: string | number | null;
-    phone: string | number | null;
-    company: string | number | null;
+    name: string|number| File|null;
+    email: string|number| File|null;
+    phone: string|number| File|null;
+    company: string|number| File|null;
     message: string | number | null;
-  }|null>(null)
+  }|string>('')
 
-  const handleEmailValue = (value: string | number | null) =>
+  const handleEmailValue = (value: string|number| File|null) =>
     setEmailValue(value);
-  const handleNameValue = (value: string | number | null) =>
+  const handleNameValue = (value: string|number| File|null) =>
     setNameValue(value);
-  const handlePhoneValue = (value: string | number | null) =>
+  const handlePhoneValue = (value: string|number| File|null) =>
     setPhoneValue(value);
-  const handleCompanyValue = (value: string | number | null) =>
+  const handleCompanyValue = (value: string|number| File|null) =>
     setCompanyValue(value);
   const handleMessageValue = (value: string | number | null) =>
     setMessageValue(value);
@@ -103,33 +103,41 @@ const FormContact = () => {
             <form className="flex flex-col gap-y-3">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                 <InputForm
+                  label={false}
                   value={nameValue}
                   name="name"
                   type="text"
                   placeholder="Name"
+                  propsClass="bg-white/30 backdrop-blur-sm placeholder:text-white/70 text-white focus:border-2 focus:border-orange-500 font-poppins placeholder:font-semibold"
                   handleValue={handleNameValue}
                 />
                 <InputForm
+                  label={false}
                   value={companyValue}
                   name="company"
                   type="text"
                   placeholder="Company"
+                  propsClass="bg-white/30 backdrop-blur-sm placeholder:text-white/70 text-white focus:border-2 focus:border-orange-500 font-poppins placeholder:font-semibold"
                   handleValue={handleCompanyValue}
                 />
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                 <InputForm
+                  label={false}
                   value={phoneValue}
                   name="phone"
                   type="number"
                   placeholder="Phone"
+                  propsClass="bg-white/30 backdrop-blur-sm placeholder:text-white/70 text-white focus:border-2 focus:border-orange-500 font-poppins placeholder:font-semibold"
                   handleValue={handlePhoneValue}
                 />
                 <InputForm
+                  label={false}
                   value={emailValue}
                   name="email"
                   type="email"
                   placeholder="Email"
+                  propsClass="bg-white/30 backdrop-blur-sm placeholder:text-white/70 text-white focus:border-2 focus:border-orange-500 font-poppins placeholder:font-semibold"
                   handleValue={handleEmailValue}
                 />
               </div>
@@ -137,6 +145,7 @@ const FormContact = () => {
                 value={messageValue}
                 name="message"
                 placeholder="Message"
+                // propsClass="bg-white/30 backdrop-blur-sm placeholder:text-white/70 text-white"
                 handleValue={handleMessageValue}
               />
             </form>
