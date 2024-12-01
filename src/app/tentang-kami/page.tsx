@@ -6,6 +6,7 @@ import SectorProject from "@/components/organism/SectorProject";
 import Footer from "@/components/organism/Footer";
 import WhatsappButtton from "@/components/molecules/WhatsappButton";
 import ClientSlider from "@/components/organism/ClientSlider";
+import ClientTestimoni from "@/components/organism/ClientTestimoni";
 const AboutUs = () => {
   return (
     <>
@@ -23,7 +24,8 @@ const AboutUs = () => {
       {/* <HeroComponent /> */}
       <SectorProject />
       <CategoryProject />
-      <ClientSlider />
+      <ClientSlider title="Our Clients" />
+      <ClientTestimoni title="Testimoni"/>
       <FormContact />
       <WhatsappButtton />
       <Footer />

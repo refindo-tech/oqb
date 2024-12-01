@@ -25,7 +25,7 @@ const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}
           </p>
           <ButtonComponent
             content={"Start Consultation"}
-            propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-[50px] text-greenWhite hover:text-navy "
+            propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-full text-greenWhite hover:text-navy "
           />
         </div>
       </div>

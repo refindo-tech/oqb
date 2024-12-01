@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import InputForm from "../atom/InputForm";
 import { createBlog } from "@/utils/lib/fetchBlog";
-import SelectInput from "../atom/icons/SelectInput";
+import SelectInput from "../atom/SelectInput";
 const QuillEditor = dynamic(() => import("@/components/molecules/RichText"), {
   ssr: false,
 });

@@ -27,18 +27,22 @@ const ServiceOffer = () => {
         <CardService
           path="/images/assets/card-image/website.jpg"
           theme={"Website"}
+          component={["Design", "Development"]}
         />
         <CardService
           path="/images/assets/card-image/mobile_app.jpg"
           theme={"Mobile App"}
+          component={["Design", "Development"]}
         />
         <CardService
           path="/images/assets/card-image/multiplatform.jpg"
           theme={"Multiplatform App"}
+          component={["Design", "Development"]}
         />
         <CardService
           path="/images/assets/card-image/system_integration.jpg"
           theme={"System Integration"}
+          component={["Data", "Infrastructure"]}
         />
       </div>
       {/* <Link href={'/product'} className="p-3 text-white font-semibold bg-biru hover:bg-blue-800 rounded-lg">See more</Link> */}

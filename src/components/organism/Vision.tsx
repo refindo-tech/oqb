@@ -16,8 +16,8 @@ const VisionComponent = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center gap-10 flex-grow xl:max-w-[50%]">
-          <h2 className="text-greenWhite text-4xl lg:text-7xl font-semibold">Transforming Ideas into Impact</h2>
-          <h3 className="font-poppins lg:text-lg font-medium text-blueWhite">We are here to empower organizations to unlock their potential by transforming visionary ideas into impactful and sustainable digital solutions. We strive to be a trusted partner in delivering custom software applications that drive growth, optimize workflows, and support innovation.</h3>
+          <h2 className="text-greenWhite text-4xl lg:text-6xl font-semibold">Transforming Ideas into Impact</h2>
+          <h3 className="font-poppins lg:text-lg font-medium text-blueWhite text-justify">We are here to empower organizations to unlock their potential by transforming visionary ideas into impactful and sustainable digital solutions. We strive to be a trusted partner in delivering custom software applications that drive growth, optimize workflows, and support innovation.</h3>
         </div>
       </div>
     </div>

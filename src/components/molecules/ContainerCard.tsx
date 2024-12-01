@@ -6,6 +6,7 @@ interface Blog {
   id: number;
   title: string;
   description: string;
+  thumbnail:string;
   slug: string;
   content: string;
   tags: string;
@@ -25,6 +26,7 @@ const ContainerCard = () => {
       try {
         const response = await listBlog();
         if (response) {
+          console.log(response)
           setDataListBlog(response.data);
         }
       } catch (error) {
@@ -42,6 +44,7 @@ const ContainerCard = () => {
             title={`${item.title}`}
             slug={`${item.slug}`}
             description={`${item.description}`}
+            thumbnail={`${item.thumbnail}`}
             key={index}
           />
         ))}

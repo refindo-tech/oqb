@@ -2,35 +2,45 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 interface propsCardBlog {
-  title:string,
-  slug:string,
-  description:string
+  title: string;
+  slug: string;
+  description: string;
+  thumbnail: string;
 }
-const CardBlog:React.FC<propsCardBlog> = ({title, description, slug}) => {
+const CardBlog: React.FC<propsCardBlog> = ({
+  title,
+  description,
+  slug,
+  thumbnail,
+}) => {
   return (
     <Link
       prefetch={true}
       href={`/insight/${slug}`}
-      className="w-full min-h-[350px] lg:min-h-[400px] py-5 px-3 hover:py-2 hover:px-0 rounded-t-lg"
+      className="w-full min-h-[350px] h-[400px] py-5 px-3 hover:py-2 hover:px-0 rounded-t-lg"
     >
       <div className="w-full h-full rounded-lg flex flex-col">
         <div className="w-full h-[100%] relative -z-10">
           <div className="rounded-lg absolute w-full h-full">
             <Image
-              src="/images/assets/card-image/thumbnail1.jpg"
+              // src="/images/assets/card-image/thumbnail1.jpg"
+              src={`${thumbnail}`}
               alt="thumbnail-card"
               fill // Menyebarkan gambar sepenuhnya
               sizes="100vw" // Untuk responsivitas optimal
               style={{
                 //   objectFit: "contain", // Memastikan gambar tidak terpotong
                 //   borderRadius: "8px", // Membuat tepi rounded
+                objectPosition:"center",
                 borderRadius: "8px",
               }}
             />
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0 z-10 p-3 flex flex-grow flex-col justify-end items-end gap-5 bg-gradient-to-t from-[#1c1678]/100  to-gray-700/50 rounded-lg">
             <div className="w-full flex flex-col gap-3 h-[40%] justify-start">
-              <h3 className="font-semibold text-2xl text-greenWhite hover:text-purple">{title}</h3>
+              <h3 className="font-semibold text-2xl text-greenWhite hover:text-purple">
+                {title}
+              </h3>
               <p className="line-clamp-2 text-blueWhite text-lg">
                 {description}
               </p>

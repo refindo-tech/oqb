@@ -25,9 +25,9 @@ const CreateBlog = () => {
       <div className="flex justify-end my-5">
         <ButtonComponent
           onClick={handleModalAddBlog}
-          propsClass="hover:bg-orange-600 bg-orange-500 text-white hover:text-gray-200"
+          propsClass="hover:bg-orange-600 bg-orange-500 text-white hover:text-gray-200 rounded-lg"
           content={
-            <div className="flex gap-2">
+            <div className="flex gap-1">
               <span className="font-semibold">Tambah Blog</span>
               <Plus />
             </div>

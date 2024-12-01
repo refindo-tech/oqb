@@ -10,7 +10,7 @@ const SectorProject = () => {
             Partner In Your Vision
           </h2>
           <p className="text-blueWhite text-lg">
-            OQB is a software house that stands at
+            PT. OQB Software House stands at
             the crossroads of innovation and reliability. We don’t just build
             software; we create tailored digital solutions designed to optimize
             workflows, enhance team productivity, and make technology truly work

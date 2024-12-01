@@ -2,7 +2,9 @@ import db from "../../utils/helpers/db";
 class Blog {
     listBlog = async () =>{
         try {
-            const getListBlog = await db.blog.findMany()
+            const getListBlog = await db.blog.findMany({
+                orderBy:{created_at:'desc'}
+            })
             return{
                 code:200,
                 message: "Get List Blog Success",
@@ -32,6 +34,36 @@ class Blog {
             return {
                 code:500,
                 message: "Blog Module Create Blog Error"
+            }
+        }
+    }
+    detailBlog = async(req) =>{
+        try {
+            const {slug} = req
+            console.log(slug)
+            const getBlog = await db.blog.findFirst({
+                where:{
+                    slug:slug
+                }
+            })
+            if(getBlog){
+                return {
+                    code:200,
+                    message:'Get Detail Blog Success',
+                    data:getBlog
+                }
+            }
+            else{
+                return {
+                    code:404,
+                    message:'Blog Not Found',
+                }
+            }
+        } catch (error) {
+            console.log('Error Blog Module Detail Blog',error)
+            return{
+                code:500,
+                message:'Error when get detail blog'
             }
         }
     }

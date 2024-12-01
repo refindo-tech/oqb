@@ -11,8 +11,8 @@ const ButtonComponent: React.FC<{
     <button
       onClick={onClick}
       type={type ? type : "button"}
-      className={`p-2 rounded-lg ${
-        propsClass ? propsClass : "bg-orange-500 w-fit text-white"
+      className={`p-2 ${
+        propsClass ? propsClass : "bg-orange-500 w-fit text-white rounded-lg"
       }`}
     >
       {typeof content === "string" ? content : content}

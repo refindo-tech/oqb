@@ -18,19 +18,19 @@ const Footer = () => {
             <h4 className="font-semibold text-lg">PT. OQB Software House</h4>
             <div className="flex flex-col gap-1">
               <p className="font-poppins text-white/70">
-                Jalan Villa Tangerang Elok, Kec. Pasar Kemis, Kab. Tangerang,
+                Jalan Villa Tangerang Elok, Kecamatan Pasar Kemis, Kabupaten Tangerang,
                 Banten, 15560
               </p>
-              <p className="font-poppins text-white/70">
+              {/* <p className="font-poppins text-white/70">
                 WhatsApp: 08123456789
               </p>
               <p className="font-poppins text-white/70">
                 Email: oqbsoftwarehouse@gmail.com
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
-        <div className="grid grid-row-1 lg:grid-row-2 gap-5 place-self-end">
+        <div className="grid grid-row-1 lg:grid-row-2 gap-5 lg:place-self-end">
           <div id="layanan-footer" className="flex flex-col gap-5 text-white">
             <h5 className="text-white font-semibold text-4xl">Services</h5>
             <div className="flex flex-col gap-1 text-white/70">
@@ -46,15 +46,15 @@ const Footer = () => {
           >
             <h5 className="text-white font-semibold text-4xl">Insights</h5>
             <div className="flex flex-col gap-1">
-              <h6 className="font-semibold">Technology & Trend</h6>
-              <h6 className="font-semibold">Education & Tutorial</h6>
-              <h6 className="font-semibold">Project Cases Study</h6>
-              <h6 className="font-semibold">Business Technology Management</h6>
+              <Link href={"/"} className="font-semibold">Technology & Trend</Link>
+              <Link href={"/"} className="font-semibold">Education & Tutorial</Link>
+              <Link href={"/"} className="font-semibold">Project Cases Study</Link>
+              <Link href={"/"} className="font-semibold">Business Technology Management</Link>
             </div>
           </div>
         </div>
       </div>
-      <div>Copyright @ PT. OQB Software House</div>
+      <div className="text-white/70">© 2024 PT. OQB Software House. All rights reserved</div>
     </footer>
   );
 };

@@ -83,7 +83,7 @@ const InputForm: React.FC<propsInputForm> = ({
         } // Hindari memberikan value untuk file
         // value={value ? value:''}
         onChange={handleProps}
-        className={`w-full rounded ${
+        className={`w-full rounded-full ${
           type === "file" ? "hidden" : ""
         } ${propsClass} ${
           type !== "file" ? "border-2 border-gray-500 h-12 p-5" : ""

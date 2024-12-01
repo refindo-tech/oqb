@@ -2,7 +2,7 @@
 import HeroComponent from "@/components/organism/Hero";
 import Navbar from "@/components/organism/Navbar";
 import ServiceOffer from "@/components/organism/ServicesOffer";
-import SliderIcon from "@/components/molecules/SliderIcon";
+import ClientSlider from "@/components/organism/ClientSlider";
 import ClientTestimoni from "@/components/organism/ClientTestimoni";
 import FormContact from "@/components/organism/FormContact";
 import ProjectPhases from "@/components/organism/StepComponent";
@@ -36,8 +36,8 @@ const HomePage = () => {
       </div>
       <div className="flex flex-col py-40">
         <VisionComponent />
-        <SliderIcon />
-        <ClientTestimoni />
+        <ClientSlider />
+        <ClientTestimoni title="Clients Experiences"/>
       </div>
       <LastBlog />
       <FormContact />

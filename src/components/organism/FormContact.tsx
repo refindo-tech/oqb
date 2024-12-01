@@ -74,7 +74,7 @@ const FormContact = () => {
     >
       <div className="flex flex-col gap-3 bg-gray-950/50 rounded-2xl">
         <div className="flex flex-row flex-wrap gap-x-5 gap-y-10 px-7 pt-7 pb-0 lg:px-10 lg:pt-10 rounded-2xl">
-          <div className="grow flex flex-col justify-center gap-10 w-full xl:max-w-[50%]">
+          <div className="grow flex flex-col justify-center gap-10 w-full lg:max-w-[50%]">
             <h3 className="font-bold text-5xl lg:text-7xl text-white">
               Contact Us
             </h3>
@@ -154,7 +154,7 @@ const FormContact = () => {
         <div className="w-full flex justify-end px-10 pb-10">
           <ButtonComponent
             onClick={actionSendEmail}
-            propsClass="bg-purple font-semibold w-52 h-[56px] rounded-[50px] hover:bg-navy text-navy hover:text-greenWhite hover:shadow-xl"
+            propsClass="bg-purple font-semibold w-full lg:w-52 h-[56px] rounded-[50px] hover:bg-navy text-navy hover:text-greenWhite hover:shadow-xl"
           />
         </div>
       </div>
