@@ -80,8 +80,7 @@ const FormContact = () => {
             </h3>
             <div className="flex flex-col gap-5">
               <h4 className="text-gray-400 text-xl">
-                At OQB, we’re ready to collaborate, create, and support your
-                journey to success.
+              We are ready to provide solutions and look forward to discussing how we can help
               </h4>
               <div className="flex gap-4">
                 <Link

@@ -8,7 +8,7 @@ const ClientTestimoni:React.FC<{title:string}> = ({title}) => {
           <h2 className="font-semibold text-4xl font-poppins text-greenWhite">
             {title}
           </h2>
-          <h3 className="text-blueWhite font-poppins text-lg text-justify indent-3">
+          <h3 className="text-blueWhite font-poppins text-lg">
             {" "}
             Every project is more than just a task; it’s a partnership built on
             trust, collaboration, and shared goals. Their testimonials speak to

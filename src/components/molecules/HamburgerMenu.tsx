@@ -1,12 +1,24 @@
-// 'use client'
+"use client";
 import React from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronUp, ChevronDown } from "lucide-react";
+import ButtonComponent from "../atom/Button";
+import { useState } from "react";
 const HamburgerMenu: React.FC<{
   onClick: () => void;
   isShowMenu: boolean;
   isScroll: boolean;
 }> = ({ onClick, isShowMenu, isScroll }) => {
+  const [isDropdown, setIsDropdown] = useState<boolean>(false);
+  const category = [
+    "Technology & Trend",
+    "Education & Tutorial",
+    "Project Case Study",
+    "Business Technology Management",
+  ];
+  const handleDropdown = () => {
+    setIsDropdown(!isDropdown);
+  };
   return (
     <>
       <button onClick={onClick} className="lg:hidden">
@@ -30,9 +42,40 @@ const HamburgerMenu: React.FC<{
               {isShowMenu ? <X color="#FFFFFF" /> : <Menu />}
             </button>
           </div>
-          <div className="w-[80%] mx-auto flex flex-col gap-3">
+          <div className="w-[70%] mx-auto flex flex-col gap-3">
             <Link href="/">Home</Link>
+            <Link href="/#services">Services</Link>
+            <div className="flex justify-between">
+              <Link href="/insight">Insight</Link>
+              <ButtonComponent
+                onClick={handleDropdown}
+                propsClass="p-0 bg-transparent"
+                content={
+                  <>
+                    {isDropdown ? (
+                      <ChevronUp size={16} />
+                    ) : (
+                      <ChevronDown size={16} />
+                    )}
+                  </>
+                }
+              />
+            </div>
+            {isDropdown && (
+              <div className="flex flex-col gap- pl-3">
+                {category.map((item, index) => (
+                  <Link
+                    href="/insight"
+                    key={index}
+                    className=" pb-2 text-white/70"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            )}
             <Link href="/contact">Contact</Link>
+            <Link href="/about-us">About Us</Link>
           </div>
         </div>
       )}

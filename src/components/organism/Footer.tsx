@@ -15,7 +15,7 @@ const Footer = () => {
             width={300}
           />
           <div className="flex flex-col">
-            <h4 className="font-semibold text-lg">PT. OQB Software House</h4>
+            <h4 className="font-semibold text-2xl">PT. OQB Software House</h4>
             <div className="flex flex-col gap-1">
               <p className="font-poppins text-white/70">
                 Jalan Villa Tangerang Elok, Kecamatan Pasar Kemis, Kabupaten Tangerang,
@@ -31,30 +31,30 @@ const Footer = () => {
           </div>
         </div>
         <div className="grid grid-row-1 lg:grid-row-2 gap-5 lg:place-self-end">
-          <div id="layanan-footer" className="flex flex-col gap-5 text-white">
-            <h5 className="text-white font-semibold text-4xl">Services</h5>
+          <div id="layanan-footer" className="flex flex-col gap-3 text-white">
+            <h5 className="text-white font-semibold text-2xl">Services</h5>
             <div className="flex flex-col gap-1 text-white/70">
-              <Link href={"/"}>Website Design & Development</Link>
-              <Link href={"/"}>Mobile App Design & Development</Link>
-              <Link href={"/"}>Multiplatform App Design & Development</Link>
-              <Link href={"/"}>System Integration</Link>
+              <Link href={"/profile#services"}>Website Design & Development</Link>
+              <Link href={"/profile#services"}>Mobile App Design & Development</Link>
+              <Link href={"/profile#services"}>Multiplatform App Design & Development</Link>
+              <Link href={"/profile#services"}>System Integration</Link>
             </div>
           </div>
           <div
             id="contact-footer"
-            className="flex flex-col gap-5 text-white/70"
+            className="flex flex-col gap-3 text-white/70"
           >
-            <h5 className="text-white font-semibold text-4xl">Insights</h5>
+            <h5 className="text-white font-semibold text-2xl">Insights</h5>
             <div className="flex flex-col gap-1">
-              <Link href={"/"} className="font-semibold">Technology & Trend</Link>
-              <Link href={"/"} className="font-semibold">Education & Tutorial</Link>
-              <Link href={"/"} className="font-semibold">Project Cases Study</Link>
-              <Link href={"/"} className="font-semibold">Business Technology Management</Link>
+              <Link href={"/insight"} className="font-semibold">Technology & Trend</Link>
+              <Link href={"/insight"} className="font-semibold">Education & Tutorial</Link>
+              <Link href={"/insight"} className="font-semibold">Project Cases Study</Link>
+              <Link href={"/insight"} className="font-semibold">Business Technology Management</Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="text-white/70">© 2024 PT. OQB Software House. All rights reserved</div>
+      <div className="text-white/70 text-xs">© 2024 PT. OQB Software House. All rights reserved</div>
     </footer>
   );
 };

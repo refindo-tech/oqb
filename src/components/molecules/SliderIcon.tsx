@@ -1,6 +1,6 @@
 import Image from "next/image";
 const SliderIcon = () => {
-  const logos =[
+  const logos1 =[
     "/images/assets/client-logo/mya.png",
     "/images/assets/client-logo/my_beautica.png",
     "/images/assets/client-logo/netplus_connection.png",
@@ -11,24 +11,63 @@ const SliderIcon = () => {
     "/images/assets/client-logo/my_academy.png",
     "/images/assets/client-logo/p_kota_serang.png",
     "/images/assets/client-logo/Kedaireka.png",
-    "/images/assets/client-logo/sman_3_kota_serang.png"
+    "/images/assets/client-logo/sman_3_kota_serang.png",
+  ]
+  const logos2 =[
+    "/images/assets/client-logo/mya.png",
+    "/images/assets/client-logo/my_beautica.png",
+    "/images/assets/client-logo/netplus_connection.png",
+    "/images/assets/client-logo/y_irsyadul_ibad.png",
+    "/images/assets/client-logo/untirta.png",
+    "/images/assets/client-logo/isuzu.png",
+    "/images/assets/client-logo/myg.png",
+    "/images/assets/client-logo/my_academy.png",
+    "/images/assets/client-logo/p_kota_serang.png",
+    "/images/assets/client-logo/Kedaireka.png",
+    "/images/assets/client-logo/sman_3_kota_serang.png",
+  ]
+  const logos3 =[
+    "/images/assets/client-logo/mya.png",
+    "/images/assets/client-logo/my_beautica.png",
+    "/images/assets/client-logo/netplus_connection.png",
+    "/images/assets/client-logo/y_irsyadul_ibad.png",
+    "/images/assets/client-logo/untirta.png",
+    "/images/assets/client-logo/isuzu.png",
+    "/images/assets/client-logo/myg.png",
+    "/images/assets/client-logo/my_academy.png",
+    "/images/assets/client-logo/p_kota_serang.png",
+    "/images/assets/client-logo/Kedaireka.png",
+    "/images/assets/client-logo/sman_3_kota_serang.png",
+  ]
+  const logos4 =[
+    "/images/assets/client-logo/mya.png",
+    "/images/assets/client-logo/my_beautica.png",
+    "/images/assets/client-logo/netplus_connection.png",
+    "/images/assets/client-logo/y_irsyadul_ibad.png",
+    "/images/assets/client-logo/untirta.png",
+    "/images/assets/client-logo/isuzu.png",
+    "/images/assets/client-logo/myg.png",
+    "/images/assets/client-logo/my_academy.png",
+    "/images/assets/client-logo/p_kota_serang.png",
+    "/images/assets/client-logo/Kedaireka.png",
+    "/images/assets/client-logo/sman_3_kota_serang.png",
   ]
   return (
     <div className=" w-full flex justify-center">
       <div
-        className="relative w-[80%] overflow-hidden h-[70] lg:h-[120px] rounded-lg flex gap-5"
+        className="relative w-[80%] overflow-hidden h-[70] lg:h-[100px] rounded-lg flex gap-5"
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 z-10 bg-gradient-to-r from-navy/100 via-transparent to-navy/100">
         </div>
         <div
           className="absolute top-0 left-0 right-0 bottom-0 flex justify-around w-full h-full animate-infinite-scroll"
-        >{[...logos, ...logos].map((item, index)=>(
+        >{[...logos1, ...logos2, ...logos3, ...logos4].map((item, index)=>(
           <Image
             src={item}
             alt="client-logo"
             width={120}
-            height={120}
-            className="mx-2 lg:mx-5 lg:w-[120] lg:h-[120] w-[70] h-[70] block"
+            height={100}
+            className="mx-2 lg:mx-5 lg:w-[120] lg:h-[100] w-[70] h-[70] block"
             key={index}
           />
         ))}

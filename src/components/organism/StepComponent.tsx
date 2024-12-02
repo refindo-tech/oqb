@@ -1,4 +1,5 @@
 import React from "react";
+import StepCarousel from "../molecules/StepCarousel";
 interface propsProjectPhase {
   number: number;
   title: string;
@@ -37,7 +38,7 @@ const ConnectorLines = () => (
     {/* Third row horizontal line */}
     {/* <div className="absolute top-[380px] left-0 right-[10%] border-t-2 border-dashed border-purple" /> */}
     <div className="absolute top-[620px] left-0 right-0 border-t-2 border-dashed border-purple" />
-    
+
     {/* Right vertical connector 2*/}
     {/* <div className="absolute right-0 top-[380px] h-[180px] border-r-2 border-dashed border-gray-400" /> */}
   </div>
@@ -108,29 +109,41 @@ const ProjectPhases = () => {
   ];
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-8 py-20 hidden lg:block">
-      <h2 className="text-5xl font-roboto font-semibold text-center mb-16 text-greenWhite">Project Phases</h2>
-      <div className="relative">
-        <ConnectorLines />
-        {/* First Row */}
-        <div className="flex flex-col md:flex-row justify-between px-5 mb-9 relative z-10">
-          {phases.slice(0, 4).map((phase) => (
-            <ProjectPhase key={phase.number} {...phase} />
-          ))}
+    <div>
+      <div className="w-full max-w-[1200px] mx-auto px-8 py-20 hidden lg:block">
+        <h2 className="text-3xl font-roboto font-semibold text-center mb-16 text-greenWhite">
+          Project Phases
+        </h2>
+        <div className="relative">
+          <ConnectorLines />
+          {/* First Row */}
+          <div className="flex flex-col md:flex-row justify-between px-5 mb-9 relative z-10">
+            {phases.slice(0, 4).map((phase) => (
+              <ProjectPhase key={phase.number} {...phase} />
+            ))}
+          </div>
+          {/* Second Row */}
+          <div className="flex flex-col md:flex-row-reverse justify-between pr-5 pl-10 mb-10 relative z-10">
+            {phases.slice(4, 7).map((phase) => (
+              <ProjectPhase key={phase.number} {...phase} />
+            ))}
+            {/* <div className="md:w-48" /> Spacer for alignment */}
+          </div>
+          {/* Third Row */}
+          <div className="flex flex-col md:flex-row pl-10 justify-between relative z-10">
+            {phases.slice(7).map((phase) => (
+              <ProjectPhase key={phase.number} {...phase} />
+            ))}
+            {/* <div className="md:w-48" /> Spacer for alignment */}
+          </div>
         </div>
-        {/* Second Row */}
-        <div className="flex flex-col md:flex-row-reverse justify-between pr-5 pl-10 mb-10 relative z-10">
-          {phases.slice(4, 7).map((phase) => (
-            <ProjectPhase key={phase.number} {...phase} />
-          ))}
-          {/* <div className="md:w-48" /> Spacer for alignment */}
-        </div>
-        {/* Third Row */}
-        <div className="flex flex-col md:flex-row pl-10 justify-between relative z-10">
-          {phases.slice(7).map((phase) => (
-            <ProjectPhase key={phase.number} {...phase} />
-          ))}
-          {/* <div className="md:w-48" /> Spacer for alignment */}
+      </div>
+      <div className="lg:hidden min-h-[70vh] w-full flex flex-col">
+        <h2 className="text-3xl font-roboto font-semibold text-center text-greenWhite">
+          Project Phases
+        </h2>
+        <div className="flex flex-grow">
+          <StepCarousel />
         </div>
       </div>
     </div>

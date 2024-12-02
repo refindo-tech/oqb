@@ -25,6 +25,7 @@ const BlogContainer = () => {
     const [searchValue, setSearchValue] = useState<string> ('')
     const [categoryValue, setCategoryValue] = useState<string>('')
     const categoryOption = [
+        {value:"", label:"All"},
         {value:"TechnologyTrend", label: "Technology & Trend"}, 
         {value:"EducationTutorial", label: "Education & Tutorial"}, 
         {value:"ProjectCasesStudy", label: "Project Case Study"}, 
@@ -58,10 +59,14 @@ const BlogContainer = () => {
                 setDataListBlog(filtered || null)
             }
             else if(categoryValue){
-                const filtered = rawData?.filter(data=>{
-                    return data.category.toLowerCase().includes(categoryValue.toLowerCase())
-                })
-                setDataListBlog(filtered || null)
+                if(categoryValue !== ''){
+                    const filtered = rawData?.filter(data=>{
+                        return data.category.toLowerCase().includes(categoryValue.toLowerCase())
+                    })
+                    setDataListBlog(filtered || null)
+                } else{
+                    setDataListBlog(rawData)
+                }
             }
             else{
                 setDataListBlog(rawData)
@@ -84,12 +89,12 @@ const BlogContainer = () => {
                     {/* <InputForm type="text" autoFocus={false} placeholder="Cari Konten" name="search" label={false}/>
                      */}
                     <SearchInput handleValue={handleSearch}/>
-                    <h3 className="text-greenWhite font-semibold text-3xl font-roboto">Kategori</h3>
-                    <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                    <h3 className="text-greenWhite pl-3 lg:pl-0 font-semibold text-3xl font-roboto">Category</h3>
+                    <div className="flex flex-row flex-wrap gap-3">
                         {categoryOption.map((item, index)=>(
                             <ButtonComponent
                                 key={index}
-                                propsClass="w-full bg-greenWhite rounded-lg text-left font-semibold p-3"
+                                propsClass={`text-center text-nowrap bg-transparent hover:bg-purple hover:text-navy border-2 border-purple rounded-full text-left font-semibold p-3 text-blueWhite ${item.label === "All" ? 'w-[70]': 'w-fit'}`}
                                 onClick={()=>handleCategory(item.value)}
                                 content={
                                     <>{item.label}

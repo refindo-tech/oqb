@@ -14,10 +14,11 @@ export const POST = async (request) => {
         const getFileName = file.name
         const excludeExtension = getFileName.split('.')
         const date = new Date()
-        const formattedName = `${excludeExtension[0]}_${date.getFullYear()}-${date.getMonth()}-${date.getDay()}.jpg`
+        const formattedName = `${excludeExtension[0]}-${date.getTime()}.${excludeExtension.pop()}`
         const filePath = `./public/images/assets/content/${formattedName}`;
+        const relativePath = `/images/assets/content/${formattedName}`;
         await pump(file.stream(), fs.createWriteStream(filePath));
-        return NextResponse.json({ message: "Upload photo success", path: filePath }, { status: 200 })
+        return NextResponse.json({ message: "Upload photo success", path: relativePath }, { status: 200 })
     } catch (error) {
         console.log('Error API Upload Photo', error)
         return NextResponse.json({ message: 'Error when upload Foto' }, { status: 500 })

@@ -29,7 +29,7 @@ const CardBenefit: React.FC<{ title: string; description: string; path:string }>
       {isHover ? (
         <p className="transition-colors duration-300">{description}</p>
       ) : (
-        <h3 className="text-xl font-semibold text-greenWhite">{title}</h3>
+        <h3 className="text-xl font-semibold text-blueWhite">{title}</h3>
       )}
     </div>
   );

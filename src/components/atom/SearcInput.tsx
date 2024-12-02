@@ -18,12 +18,12 @@ const SearchInput:React.FC<propsSearchInput> = ({handleValue}) => {
                 id="search"
                 value={searchValue}
                 onChange={(e)=>handleSearchValue(e.target.value)}
-                placeholder="Cari Konten"
-                className="bg-gray-500/50 w-[80%] lg:w-fit backdrop-blur text-white rounded-tl-full rounded-bl-full py-3 px-4 placeholder:text-white focus:border-none focus:outline-none" 
+                placeholder="Search"
+                className="bg-gray-500/50 w-full backdrop-blur text-white rounded-tl-full rounded-bl-full py-3 pl-4 pr-2 placeholder:text-white focus:border-none focus:outline-none" 
             />
             <ButtonComponent
                 onClick={()=>handleValue(searchValue)} 
-                propsClass="rounded-tr-full rounded-br-full bg-gray-500/50 hover:bg-gray-500/70 backdrop-blur p-3 h-full w-[20%] lg:w-full flex items-center hocer:border-blue-600 justify-end"
+                propsClass="rounded-tr-full rounded-br-full bg-gray-500/50 hover:bg-gray-500/70 backdrop-blur p-1 h-full w-[50]  flex items-center hocer:border-blue-600 justify-center"
                 content={
                     <Search />
                 }

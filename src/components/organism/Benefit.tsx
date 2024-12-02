@@ -3,7 +3,7 @@ const Benefit = () => {
   return (
     <article className="min-h-[60vh] w-full py-10  flex flex-col flex-wrap lg:flex-nowrap items-center justify-center gap-10">
       <div className="w-[80%] flex flex-col gap-5 text-center">
-        <h2 className="font-semibold text-5xl text-greenWhite ">
+        <h2 className="font-bold text-3xl text-greenWhite ">
           Why Choose Us?
         </h2>
         <p className="text-lg text-blueWhite ">
@@ -11,7 +11,7 @@ const Benefit = () => {
           embody quality, collaboration, and purpose.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-y-5 gap-3">
+      <div className="flex flex-wrap justify-center gap-y-1 gap-x-3">
         <CardBenefit
           path="/images/assets/commitment.svg"
           title="Commitment to Quality"

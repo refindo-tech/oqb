@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
-  const [styleNavbar, setStyleNavbar] = useState("bg-transparent text-gray-700 hover:text-white")
+  const [styleNavbar, setStyleNavbar] = useState(
+    "bg-transparent text-gray-700 hover:text-white"
+  );
   const [isShowHamburger, setIsShowHamburger] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   useEffect(() => {
@@ -21,46 +23,44 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  useEffect(()=>{
+  useEffect(() => {
     const dynamicStyle = () => {
-      if(isScroll){
-        setStyleNavbar("bg-navy text-greenWhite shadow-xl")
+      if (isScroll) {
+        setStyleNavbar("bg-navy text-greenWhite shadow-xl");
+      } else if (isScroll && isShowHamburger) {
+        setStyleNavbar("bg-gray-700 text-white");
+      } else {
+        setStyleNavbar("bg-transparent text-gray-700 hover:text-white");
       }
-      else if(isScroll && isShowHamburger){
-        setStyleNavbar("bg-gray-700 text-white")
-      }
-      else{
-        setStyleNavbar('bg-transparent text-gray-700 hover:text-white')
-      }
-    }
-    dynamicStyle()
-  },[isScroll, isShowHamburger])
+    };
+    dynamicStyle();
+  }, [isScroll, isShowHamburger]);
   const showHamburger = () => {
     setIsShowHamburger(!isShowHamburger);
   };
   const menu = [
     { title: "Home", href: "/" },
-    { title:'Services', href:'/profile#services'},
+    { title: "Services", href: "/#services" },
     {
       title: "Insight",
       href: "/insight",
       submenu: [
         {
-          category: "Teknologi",
-          theme: ["Programming", "Database", "Cloud & Infrastructure"],
+          category: "Technology & Trend",
         },
         {
-          category: "Marketing",
-          theme: ["Periklanan", "Tips dan trik", "Info terkini"],
+          category: "Education & Tutorial",
         },
         {
-          category: "Lifestyle",
-          theme: ["Olahraga", "Kesehatan", "Terapi"],
+          category: "Project Case Study",
         },
+        {
+          category: "Business Technology Management",
+        }
       ],
     },
     { title: "Contact", href: "/contact" },
-    { title: "About Us", href: "/tentang-kami" },
+    { title: "About Us", href: "/about-us" },
   ];
   return (
     <header
@@ -93,32 +93,32 @@ const Navbar = () => {
                 <p>{item.title}</p>
               </Link>
               {item.submenu && showDropdown && (
-                <div className="absolute flex flex-row p-4 gap-10 bg-[#1c1678] rounded shadow-xl text-blueWhite mt-2">
+                <div className="absolute flex flex-col p-4 gap-3 w-[330] bg-[#1c1678] rounded shadow-xl text-blueWhite mt-2">
                   {item.submenu.map((subitem, index) => (
-                    <div className="flex flex-col gap-4" key={index}>
-                      <h2 className="text-greenWhite">
-                        {subitem.category}
-                      </h2>
-                      <div className="flex flex-col gap-1 text-blueWhite min-w-24 text-sm">
-                        {subitem.theme?.map((theme, index) => (
-                          <Link
-                            prefetch={true}
-                            className="hover:text-greenWhite"
-                            key={index}
-                            href={`/news/${theme.toLowerCase()}`}
-                          >
-                            {theme}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                    // <div className="flex flex-col gap-4" key={index}>
+                    //   <h2 className="text-greenWhite">
+                    //     {subitem.category}
+                    //   </h2>
+                    // </div>
+                    <Link
+                      prefetch={true}
+                      className="hover:text-greenWhite"
+                      key={index}
+                      href={`/insight`}
+                    >
+                      {subitem.category}
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
           ))}
         </div>
-        <HamburgerMenu onClick={showHamburger} isShowMenu={isShowHamburger} isScroll={isScroll} />
+        <HamburgerMenu
+          onClick={showHamburger}
+          isShowMenu={isShowHamburger}
+          isScroll={isScroll}
+        />
       </nav>
     </header>
   );

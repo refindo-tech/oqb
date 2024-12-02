@@ -2,7 +2,7 @@ import Image from "next/image";
 import CountProject from "@/components/atom/CountProject";
 const SectorProject = () => {
   return (
-    <div className="min-h-[70vh] w-full flex justify-center items-center py-10">
+    <div className="min-h-[70vh] w-[90%] lg:w-full flex justify-center items-center py-10 mx-auto">
       <div className="flex items-center w-[90%] lg:w-[80%] gap-10 flex-wrap-reverse lg:flex-nowrap">
         <CountProject />
         <div className="w-full lg:w-[50%] min-h-[50vh] flex flex-col gap-4 text-center">
@@ -15,11 +15,11 @@ const SectorProject = () => {
             software; we create tailored digital solutions designed to optimize
             workflows, enhance team productivity, and make technology truly work
             for your business needs. With a focus on impact and commitment to
-            quality, we’re here to bring your vision to life with precision and
+            quality, we are here to bring your vision to life with precision and
             purpose. 
             <br />
             <br />
-            We are here to empower organizations to unlock their
+            We empower organizations to unlock their
             potential by transforming visionary ideas into impactful and
             sustainable digital solutions. We strive to be a trusted partner in
             delivering custom software applications that drive growth, optimize
