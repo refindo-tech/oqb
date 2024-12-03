@@ -3,7 +3,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { type FC, useMemo, useRef } from 'react'
 import { twJoin, twMerge } from 'tailwind-merge'
 
@@ -15,31 +15,31 @@ import { twJoin, twMerge } from 'tailwind-merge'
 // import threeIcon from '@/assets/icons/technologies/three.svg'
 // import typescriptIcon from '@/assets/icons/technologies/typescript.svg'
 
-import myaIcon from '../../../public/images/assets/client-logo/mya.png'
-import myBeautica from '../../../public/images/assets/client-logo/my_beautica.png'
-import netPlus from "../../../public/images/assets/client-logo/netplus_connection.png"
-import yIrsyadulIbad from "../../../public/images/assets/client-logo/y_irsyadul_ibad.png"
-import untirta from  "../../../public/images/assets/client-logo/untirta.png"
-import isuzu from '../../../public/images/assets/client-logo/isuzu.png'
-import mygIcon from '../../../public/images/assets/client-logo/myg.png'
-import myAcademy from '../../../public/images/assets/client-logo/my_academy.png'
-import pKotaSerang from "../../../public/images/assets/client-logo/p_kota_serang.png"
-import kedaireka from '../../../public/images/assets/client-logo/Kedaireka.png'
-import sma3Serang from "../../../public/images/assets/client-logo/sman_3_kota_serang.png"
+// import myaIcon from '../../../public/images/assets/client-logo/mya.png'
+// import myBeautica from '../../../public/images/assets/client-logo/my_beautica.png'
+// import netPlus from "../../../public/images/assets/client-logo/netplus_connection.png"
+// import yIrsyadulIbad from "../../../public/images/assets/client-logo/y_irsyadul_ibad.png"
+// import untirta from  "../../../public/images/assets/client-logo/untirta.png"
+// import isuzu from '../../../public/images/assets/client-logo/isuzu.png'
+// import mygIcon from '../../../public/images/assets/client-logo/myg.png'
+// import myAcademy from '../../../public/images/assets/client-logo/my_academy.png'
+// import pKotaSerang from "../../../public/images/assets/client-logo/p_kota_serang.png"
+// import kedaireka from '../../../public/images/assets/client-logo/Kedaireka.png'
+// import sma3Serang from "../../../public/images/assets/client-logo/sman_3_kota_serang.png"
 
-// const logos4 =[
-//     "/images/assets/client-logo/mya.png",
-//     "/images/assets/client-logo/my_beautica.png",
-//     "/images/assets/client-logo/netplus_connection.png",
-//     "/images/assets/client-logo/y_irsyadul_ibad.png",
-//     "/images/assets/client-logo/untirta.png",
-//     "/images/assets/client-logo/isuzu.png",
-//     "/images/assets/client-logo/myg.png",
-//     "/images/assets/client-logo/my_academy.png",
-//     "/images/assets/client-logo/p_kota_serang.png",
-//     "/images/assets/client-logo/Kedaireka.png",
-//     "/images/assets/client-logo/sman_3_kota_serang.png",
-//   ]
+const logos =[
+    "/images/assets/client-logo/mya.png",
+    "/images/assets/client-logo/my_beautica.png",
+    "/images/assets/client-logo/netplus_connection.png",
+    "/images/assets/client-logo/y_irsyadul_ibad.png",
+    "/images/assets/client-logo/untirta.png",
+    "/images/assets/client-logo/isuzu.png",
+    "/images/assets/client-logo/myg.png",
+    "/images/assets/client-logo/my_academy.png",
+    "/images/assets/client-logo/p_kota_serang.png",
+    "/images/assets/client-logo/Kedaireka.png",
+    "/images/assets/client-logo/sman_3_kota_serang.png",
+  ]
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -49,9 +49,10 @@ type Props = {
 }
 
 // const ICONS: StaticImageData[] = [gsapIcon, nextIcon, openGLIcon, reactIcon, tailwindIcon, threeIcon, typescriptIcon]
-const ICONS = [myaIcon, myBeautica, netPlus, yIrsyadulIbad, untirta,  mygIcon, isuzu, myAcademy, pKotaSerang,  kedaireka, sma3Serang]
+// const ICONS = [myaIcon, myBeautica, netPlus, yIrsyadulIbad, untirta,  mygIcon, isuzu, myAcademy, pKotaSerang,  kedaireka, sma3Serang]
 
-const ELEMENTS = [...ICONS, ...ICONS]
+// const ELEMENTS = [...ICONS, ...ICONS]
+const ELEMENTS = [...logos, ...logos]
 
 const Marquee: FC<Props> = ({ isReversed = false, className }) => {
   const movingContainer = useRef<HTMLDivElement>(null)
@@ -104,8 +105,9 @@ const Marquee: FC<Props> = ({ isReversed = false, className }) => {
             <div
               key={index}
               className={twJoin('relative flex shrink-0 items-center justify-center')}
-              style={{ height: '100px', width: '120px' }}>
-              <Image src={src} alt="technologies icon" height={100} className="object-contain" />
+              style={{ width: '120px'}}
+            >
+              <img src={src} alt="client icon" height={100} className="object-contain" />
             </div>
           )
         })}

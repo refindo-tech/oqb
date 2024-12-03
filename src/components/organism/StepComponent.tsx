@@ -15,7 +15,7 @@ const ProjectPhase: React.FC<propsProjectPhase> = ({
       {number}
     </div>
     <h3 className=" text-greenWhite mb-2 text-lg font-semibold">{title}</h3>
-    <p className=" text-blueWhite leading-relaxed max-w-[200px]">
+    <p className=" text-blueWhite leading-relaxed max-w-[200px] font-semibold">
       {description}
     </p>
   </div>
@@ -139,7 +139,7 @@ const ProjectPhases = () => {
         </div>
       </div>
       <div className="lg:hidden min-h-[70vh] w-full flex flex-col">
-        <h2 className="text-3xl font-roboto font-semibold text-center text-greenWhite">
+        <h2 className="text-3xl font-roboto font-semibold text-center text-greenWhite mb-5">
           Project Phases
         </h2>
         <div className="flex flex-grow">

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import HamburgerMenu from "@/components/molecules/HamburgerMenu";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -67,7 +67,7 @@ const Navbar = () => {
       className={`w-full flex ${styleNavbar} justify-center h-16 fixed top-0 left-0 right-0 transition-all ease-in-out duration-1000 z-20`}
     >
       <nav className="min-w-[70%] h-full flex justify-between items-center font-poppins tracking-wide">
-        <Image
+        <img
           src={"/images/assets/oqbbright.png"}
           width={70}
           height={70}

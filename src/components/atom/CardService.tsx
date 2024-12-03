@@ -1,5 +1,5 @@
 'use client'
-import Image from "next/image";
+// import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import ButtonComponent from "@/components/atom/Button";
@@ -15,8 +15,10 @@ const CardService:React.FC<propsCardService> = ({theme, path, component}) => {
   }
   return (
     // h-[300px] md:h-[350px] lg:h-[400px]
-    <div className="relative h-[250px] md:h-[350px] lg:h-[400px]">
-      <div className="absolute rounded-lg shadow-xl h-full w-full">
+    <div className="relative h-[250px] md:h-[350px] lg:h-[400px] rounded-xl bg-cover bg-center" style={{
+      backgroundImage: `url(${path})`, // Gunakan style inline untuk background-image
+    }}>
+      {/* <div className="absolute rounded-lg shadow-xl h-full w-full">
         <Image
           src={path}
           alt="thumbnail-card"
@@ -28,7 +30,7 @@ const CardService:React.FC<propsCardService> = ({theme, path, component}) => {
             borderRadius: "8px",
           }}
         />
-      </div>
+      </div> */}
       {/* <Image
           src={path}
           alt="thumbnail-card"

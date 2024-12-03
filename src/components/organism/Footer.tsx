@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="min-h-[60vh] w-full bg-[#1c1678] flex flex-col justify-between items-center text-white py-20 gap-10">
@@ -8,7 +8,7 @@ const Footer = () => {
           {/* <div className="bg-slate-100 rounded-lg h-16 w-full text-black">
             LOGO
           </div> */}
-          <Image
+          <img
             src={"/images/assets/croped_logo.png"}
             alt="logooqb"
             height={300}

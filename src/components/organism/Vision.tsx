@@ -1,19 +1,9 @@
-import Image from "next/image";
+// import Image from "next/image";
 const VisionComponent = () => {
   return (
     <div className="w-full flex flex-col items-center mb-20 gap-5">
       <div className="w-[80%] flex flex-wrap items-center xl:flex-nowrap gap-10">
-        <div className="relative w-full xl:w-[50%] h-[40vw] xl:h-[40vh] rounded-2xl shadow-xl">
-          <div className="absolute w-full h-full">
-            <Image
-              src={'/images/assets/transforming_idea.jpg'}
-              alt="vision"
-              fill
-              style={{
-                borderRadius: "8px"
-              }}
-            />
-          </div>
+        <div className=" w-full xl:w-[50%] h-[40vw] xl:h-[40vh] rounded-2xl shadow-xl bg-[url('/images/assets/transforming_idea.jpg')] bg-cover">
         </div>
         <div className="flex flex-col justify-center gap-10 flex-grow xl:max-w-[50%]">
           <h2 className="text-greenWhite text-4xl lg:text-6xl font-semibold">Transforming Ideas into Impact</h2>
@@ -24,3 +14,13 @@ const VisionComponent = () => {
   );
 };
 export default VisionComponent;
+{/* <div className="absolute w-full h-full">
+<Image
+  src={'/images/assets/transforming_idea.jpg'}
+  alt="vision"
+  fill
+  style={{
+    borderRadius: "8px"
+  }}
+/>
+</div> */}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import CountProject from "@/components/atom/CountProject";
 const SectorProject = () => {
   return (
@@ -27,19 +27,19 @@ const SectorProject = () => {
           </p>
           <div className="flex gap-5 flex-wrap">
             <div className="flex justify-center w-[80%] gap-12 mx-auto">
-              <Image
+              <img
                 src={"/images/nextjs.webp"}
                 alt="technolugy used"
                 width={60}
                 height={60}
               />
-              <Image
+              <img
                 src={"/images/file-type-vue.svg"}
                 alt="technolugy used"
                 width={60}
                 height={60}
               />
-              <Image
+              <img
                 src={"/images/laravel.svg"}
                 alt="technolugy used"
                 width={60}
@@ -47,19 +47,19 @@ const SectorProject = () => {
               />
             </div>
             <div className="flex justify-center w-[80%] gap-10 mx-auto">
-              <Image
+              <img
                 src={"/images/file-type-kotlin.svg"}
                 alt="technolugy used"
                 width={60}
                 height={60}
               />
-              <Image
+              <img
                 src={"/images/flutter.png"}
                 alt="technolugy used"
                 width={60}
                 height={60}
               />
-              <Image
+              <img
                 src={"/images/figma.svg"}
                 alt="technolugy used"
                 width={60}
