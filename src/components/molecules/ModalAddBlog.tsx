@@ -164,10 +164,10 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
                       <div className="loader"></div>
                     </div>
                   : 
-                  <>Submit</>}
+                  <div className="font-semibold">Submit</div>}
                   </>
                 }
-                propsClass="bg-orange-500 text-navy"
+                propsClass="bg-orange-500 text-navy p-2 rounded-xl"
               />
               {/* <h2>Preview:</h2>
               <div

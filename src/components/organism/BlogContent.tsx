@@ -20,7 +20,8 @@ type dataContent = {
 const BlogContent = () => {
   // const router = useRouter()
   const path = usePathname();
-  const slug = path.split("/")[2];
+  const rawSlug = path.split("/")[2];
+  const slug = decodeURIComponent(rawSlug);
   const [dataContent, setDataContent] = useState<dataContent>({
     category:'',
     content:'',
@@ -57,7 +58,7 @@ const BlogContent = () => {
                     </div> */}
           <div
             id="quill-content"
-            className="font-serif mt-5 ql-editor"
+            className=" mt-5 ql-editor text-greenWhite font-poppins"
             dangerouslySetInnerHTML={{__html:dataContent.content}}
             style={{
                 wordWrap: "break-word",

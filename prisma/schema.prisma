@@ -17,7 +17,7 @@ model Blog {
   id          Int             @id @unique @default(autoincrement())
   title       String          @db.VarChar(255)
   slug        String          @db.VarChar(255)
-  description String          @db.VarChar(255)
+  description String          @db.LongText
   content     String          @db.LongText
   tags        String?         @db.VarChar(255)
   creator     String?         @db.VarChar(255)

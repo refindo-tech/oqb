@@ -20,8 +20,17 @@ class Blog {
     }
     createBlog = async(req) =>{
         try {
+            console.log(req)
+            const {title, slug, description, thumbnail, content, category} = req 
             const addBlog = await db.blog.create({
-                data:req
+                data:{
+                    title,
+                    slug:decodeURIComponent(slug),
+                    description,
+                    thumbnail,
+                    content,
+                    category
+                }
             })
             if(addBlog){
                 return{
@@ -40,7 +49,7 @@ class Blog {
     detailBlog = async(req) =>{
         try {
             const {slug} = req
-            console.log(slug)
+            console.log('Detail Blog Module',slug)
             const getBlog = await db.blog.findFirst({
                 where:{
                     slug:slug

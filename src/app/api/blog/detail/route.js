@@ -5,7 +5,7 @@ export const GET = async(req) => {
         const url = new URL(req.url);
         const params = url.searchParams;
         const slug = params.get('slug')
-        const payload ={slug}
+        const payload ={slug:decodeURIComponent(slug)}
         const response = await m$blog.detailBlog(payload)
         return NextResponse.json(response, {status:response.code})
     } catch (error) {
