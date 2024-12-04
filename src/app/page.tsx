@@ -22,11 +22,11 @@ const HomePage = () => {
           </>
         }
         description="We believe that software should do more than just function, it should inspire progress"
-        path="/images/assets/hero/hero_home.jpg"
+        path="/images/assets/hero/home.png"
       />
       {/* <HeroComponent /> */}
       <ServiceOffer />
-      <div className=" bg-[url('/images/assets/why_choose_us.jpg')] bg-cover bg-fixed min-h-screen">
+      <div className=" bg-[url('/images/assets/hero/why_choose_us.png')] bg-cover bg-fixed min-h-screen">
         {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-transparent">
           </div> */}
         <div className="bg-black/50 px-10 py-16">

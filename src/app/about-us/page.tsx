@@ -19,13 +19,13 @@ const AboutUs = () => {
           </>
         }
         description="Explore how our expertise can help you"
-        path="/images/assets/hero/hero_about_us.jpg"
+        path="/images/assets/hero/about_us.png"
       />
       {/* <HeroComponent /> */}
       <SectorProject />
       <CategoryProject />
       <ClientSlider title="Our Clients" />
-      <ClientTestimoni title="Testimoni"/>
+      <ClientTestimoni title="Testimony"/>
       <FormContact />
       <WhatsappButtton />
       <Footer />

@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonComponent from "@/components/atom/Button";
+import Link from "next/link";
 // import Image from "next/image";
 interface propsHeroCompoonents {
   path:string
@@ -23,10 +23,9 @@ const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}
           <p className="font-poppins text-xl px-3 text-blueWhite">
             {description}
           </p>
-          <ButtonComponent
-            content={"Start Consultation"}
-            propsClass="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-full text-greenWhite hover:text-navy "
-          />
+          <Link prefetch={true} href={'/contact#contact'} className="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-full text-greenWhite hover:text-navy flex items-center justify-center">
+            Start Consultation
+          </Link>
         </div>
       </div>
     </div>

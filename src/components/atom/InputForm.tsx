@@ -4,8 +4,8 @@ import { uploadFoto } from "@/utils/lib/fetchUpload";
 interface propsInputForm {
   type: string;
   name: string;
-  value: string | number | null | File;
-  handleValue: (value: string | number | null | File) => void;
+  value: string | number | null;
+  handleValue: (value: string | number | null) => void;
   label: boolean;
   placeholder?: string;
   propsClass?: string;
@@ -36,11 +36,11 @@ const InputForm: React.FC<propsInputForm> = ({
         result();
       }
       // handleValue(e.target.files?.[0] || null);
-    } else {
-      const val = type === "number" ? Number(e.target.value) : e.target.value;
-      if (val !== "") {
+      
+    }
+    else {
+      const val = type === "number" ? (e.target.value !== ''? Number(e.target.value):e.target.value) : e.target.value 
         handleValue(val);
-      }
     }
   };
   return (
@@ -79,7 +79,7 @@ const InputForm: React.FC<propsInputForm> = ({
         id={name}
         name={name}
         value={
-          type === "file" ? undefined : (value as string | number | undefined)
+          type === "file" ? undefined : (value ?? "")
         } // Hindari memberikan value untuk file
         // value={value ? value:''}
         onChange={handleProps}

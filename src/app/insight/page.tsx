@@ -15,7 +15,7 @@ const BlogPage = () => {
             </>
         }
         description="Discover the latest trends, tutorials, case studies, and strategies to drive your business and technology forward"
-        path="/images/assets/hero/hero_news.jpg"
+        path="/images/assets/hero/insight.png"
       />
       <BlogContainer />
       <WhatsappButton />

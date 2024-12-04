@@ -12,7 +12,7 @@ class Contact {
             });
             const send = await transporter.sendMail({
                 from: `"${name}" <${email}>`, // sender address
-                to: 'mlearning.help@gmail.com', // list of receivers
+                to: `${process.env.ADDRESS_EMAIL}`, // list of receivers
                 subject: "CONSULTATION CLIENT", // Subject line
                 text: `${message}`, // plain text body
                 html: `<p>Name: ${name}</p><p>No. Telepon: ${phone}</p><p>Company: ${company}</p><p>${message}</p>`, // html body

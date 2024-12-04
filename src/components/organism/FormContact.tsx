@@ -9,30 +9,30 @@ import Link from "next/link";
 import {sendEmail} from '../../utils/lib/fetchContact'
 
 const FormContact = () => {
-  const [emailValue, setEmailValue] = useState<string|number| File|null>('');
-  const [nameValue, setNameValue] = useState<string|number| File|null>('');
-  const [phoneValue, setPhoneValue] = useState<string|number| File|null>('');
-  const [companyValue, setCompanyValue] = useState<string|number| File|null>(
+  const [emailValue, setEmailValue] = useState<string|number| null>('');
+  const [nameValue, setNameValue] = useState<string|number| null>('');
+  const [phoneValue, setPhoneValue] = useState<string|number| null>('');
+  const [companyValue, setCompanyValue] = useState<string|number| null>(
     ''
   );
   const [messageValue, setMessageValue] = useState<string | number | null>(
     ''
   );
   const [dataRequest, setDataRequest] = useState<{
-    name: string|number| File|null;
-    email: string|number| File|null;
-    phone: string|number| File|null;
-    company: string|number| File|null;
+    name: string|number| null;
+    email: string|number| null;
+    phone: string|number| null;
+    company: string|number| null;
     message: string | number | null;
   }|string>('')
-
-  const handleEmailValue = (value: string|number| File|null) =>
+  const [isLoad, setIsLoad] = useState<boolean>(false)
+  const handleEmailValue = (value: string|number| null) =>
     setEmailValue(value);
-  const handleNameValue = (value: string|number| File|null) =>
+  const handleNameValue = (value: string|number| null) =>
     setNameValue(value);
-  const handlePhoneValue = (value: string|number| File|null) =>
+  const handlePhoneValue = (value: string|number| null) =>
     setPhoneValue(value);
-  const handleCompanyValue = (value: string|number| File|null) =>
+  const handleCompanyValue = (value: string|number| null) =>
     setCompanyValue(value);
   const handleMessageValue = (value: string | number | null) =>
     setMessageValue(value);
@@ -56,8 +56,10 @@ const FormContact = () => {
     messageValue
   ]);
   const actionSendEmail = async() => {
+    setIsLoad(true)
     const response = await sendEmail(dataRequest)
     if(response){
+      setIsLoad(false)
       console.log(response)
       setEmailValue(null)
       setPhoneValue(null)
@@ -70,7 +72,7 @@ const FormContact = () => {
   return (
     <div
       id="contact"
-      className="w-[80%] bg-[url('/images/assets/form_contact.jpg')] bg-bottom bg-cover mx-auto my-10 rounded-2xl"
+      className="w-[80%] bg-[url('/images/assets/hero/form_contact.png')] bg-top lg:bg-center bg-cover mx-auto my-10 rounded-2xl"
     >
       <div className="flex flex-col gap-3 bg-gray-950/50 rounded-2xl">
         <div className="flex flex-row flex-wrap gap-x-5 gap-y-10 px-7 pt-7 pb-0 lg:px-10 lg:pt-10 rounded-2xl">
@@ -153,7 +155,16 @@ const FormContact = () => {
         <div className="w-full flex justify-end px-10 pb-10">
           <ButtonComponent
             onClick={actionSendEmail}
-            propsClass="bg-purple font-semibold w-full lg:w-52 h-[56px] rounded-[50px] hover:bg-navy text-navy hover:text-greenWhite hover:shadow-xl"
+            isDisabled={isLoad?true:false}
+            propsClass="bg-purple font-semibold w-full lg:w-52 h-[56px] rounded-[50px] hover:bg-navy text-navy hover:text-greenWhite hover:shadow-xl ${isDisbled&'bg-purple'}"
+            content={
+              <>{isLoad?(
+                <div className="loader mx-auto py-auto"></div>
+              ):(
+                <>Submit</>
+              )}
+              </>
+            }
           />
         </div>
       </div>

@@ -8,7 +8,7 @@ const ContactTemplate = () => {
       <HeroComponent
         title="Let’s Start Something Great Together"
         description="Reach out to OQB today and let’s discuss how we can bring your ideas to life"
-        path="/images/assets/hero/hero_contact.jpg"
+        path="/images/assets/hero/contact.png"
       />
       {/* <HeroComponent /> */}
       {/* <ContactList /> */}
