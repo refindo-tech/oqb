@@ -3,23 +3,23 @@ import { useEffect, useState } from "react"
 import CardBlog from "@/components/atom/CardBlog"
 // import InputForm from "../atom/InputForm"
 import SearchInput from "../atom/SearcInput"
-import {listBlog} from '@/utils/lib/fetchBlog'
+// import {listBlog} from '@/utils/lib/fetchBlog'
 import ButtonComponent from "../atom/Button"
+import articles from '../../../public/data.json'
 interface Blog {
     id: number;
     title: string;
     description: string;
     slug: string;
-    content: string;
-    tags: string;
-    creator: string;
+    tags: null;
+    creator: null;
     thumbnail:string;
-    category: "TechnologyTrend" | "EducationTutorial" | "ProjectCasesStudy" | "BusinessTechnologyManagement";
+    category: string;
     created_at: string;
     updated_at: string;
 }
 const BlogContainer = () => {
-    const [rawData, setRawData] = useState<Blog[]|null>(null)
+    const rawData = articles
     const [dataListBlog, setDataListBlog] = useState<Blog[] | null>(null)
     // const [dataFilter, setDataFilter] = useState<Blog[]|null>(null)
     const [searchValue, setSearchValue] = useState<string> ('')
@@ -37,19 +37,19 @@ const BlogContainer = () => {
     const handleCategory = (value:string) => {
         setCategoryValue(value)
     }
-    useEffect(()=>{
-        const fetchAPI = async() =>{
-            try {
-                const response = await listBlog()
-                if(response){
-                    setRawData(response.data)
-                }
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        fetchAPI()
-    },[])
+    // useEffect(()=>{
+    //     const fetchAPI = async() =>{
+    //         try {
+    //             const response = await listBlog()
+    //             if(response){
+    //                 setRawData(response.data)
+    //             }
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     }
+    //     fetchAPI()
+    // },[])
     useEffect(()=>{
         const createListBlog = () => {
             if(searchValue !== ''){

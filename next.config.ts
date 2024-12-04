@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   //   // domains: ['http://localhost:3000/'], // Tambahkan domain jika diperlukan
   //   // unoptimized:true
   // },
-  output: 'export',
-  assetPrefix: 'http://localhost:3000/'
+  // output: 'export',
+  // assetPrefix: 'http://localhost:3000/'
   // async redirects() {
   //   return[
   //     {

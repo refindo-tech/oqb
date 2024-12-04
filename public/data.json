@@ -1,0 +1,110 @@
+[
+    {
+        "id": 17,
+        "title": "Low-Code Development: Apakah Ini Masa Depan Pengembangan Software",
+        "slug": "low-code-development-apakah-ini-masa-depan-pengembangan-software",
+        "description": "Low-code development adalah pendekatan pengembangan aplikasi yang menggunakan alat berbasis visual seperti drag-and-drop, alur kerja otomatis, dan komponen yang dapat digunakan kembali. Hal ini memungkinkan pengembang profesional maupun individu non-teknis untuk membuat aplikasi tanpa harus menulis ribuan baris kode.",
+        "tags": null,
+        "creator": null,
+        "category": "TechnologyTrend",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/laptop-wooden-table-1733229806501.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Generative AI dan Industri Hiburan: Prediksi Tren 2025",
+        "slug": "generative-ai-dan-industri-hiburan-prediksi-tren-2025",
+        "description": "Teknologi selalu menjadi katalisator dalam mengubah cara kita menikmati hiburan. Kini, Generative AI hadir sebagai salah satu inovasi paling revolusioner, menciptakan konten secara otomatis, mulai dari tulisan hingga musik.",
+        "tags": null,
+        "creator": null,
+        "category": "TechnologyTrend",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/futuristic-smart-city-with-5g-global-network-technology-1733230411322.jpg"
+    },
+    {
+        "id": 19,
+        "title": "Apa Itu 'DevSecOps' dan Mengapa Penting dalam Pengembangan Software",
+        "slug": "apa-itu-devsecops-dan-mengapa-penting-dalam-pengembangan-software",
+        "description": "Bayangkan jika keamanan aplikasi tidak lagi menjadi penghalang, tetapi justru menjadi bagian tak terpisahkan dari setiap langkah pengembangannya. Inilah yang ditawarkan DevSecOps—pendekatan yang menyatukan pengembangan, keamanan, dan operasi.",
+        "tags": null,
+        "creator": null,
+        "category": "TechnologyTrend",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/developer-identifying-server-issues-1733230759822.jpg"
+    },
+    {
+        "id": 20,
+        "title": "Mengenal API: Cara Mengintegrasikan Layanan Eksternal dengan Aplikasi Anda",
+        "slug": "mengenal-api-cara-mengintegrasikan-layanan-eksternal-dengan-aplikasi-anda",
+        "description": "Dalam dunia pengembangan aplikasi modern, API (Application Programming Interface) telah menjadi jembatan yang memungkinkan berbagai sistem saling terhubung. API tidak hanya menyederhanakan proses integrasi, tetapi juga memberikan peluang besar untuk memperluas kemampuan aplikasi Anda dengan menghubungkan layanan eksternal.",
+        "tags": null,
+        "creator": null,
+        "category": "EducationTutorial",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/person-front-computer-working-html-1733231354981.jpg"
+    },
+    {
+        "id": 21,
+        "title": "Optimasi Database untuk Performa Aplikasi: Tips dan Trik Praktis",
+        "slug": "optimasi-database-untuk-performa-aplikasi-tips-dan-trik-praktis",
+        "description": "Dalam dunia pengembangan aplikasi modern, API (Application Programming Interface) telah menjadi jembatan yang memungkinkan berbagai sistem saling terhubung. API tidak hanya menyederhanakan proses integrasi, tetapi juga memberikan peluang besar untuk memperluas kemampuan aplikasi Anda dengan menghubungkan layanan eksternal.",
+        "tags": null,
+        "creator": null,
+        "category": "EducationTutorial",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/team_db_admin.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Pentingnya IT Governance dalam Mendukung Keberlanjutan Bisnis",
+        "slug": "pentingnya-it-governance-dalam-mendukung-keberlanjutan-bisnis",
+        "description": "Di tengah persaingan global yang semakin ketat, teknologi informasi (IT) telah menjadi pilar utama bagi keberhasilan bisnis. Namun, tanpa tata kelola yang tepat, potensi besar teknologi ini bisa terhambat oleh risiko, inefisiensi, atau bahkan kegagalan operasional.",
+        "tags": null,
+        "creator": null,
+        "category": "BusinessTechnologyManagement",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/business-teamwork-meeting-discuss-1733232332271.jpg"
+    },
+    {
+        "id": 23,
+        "title": "Mengapa Cloud Computing Menjadi Investasi Wajib untuk Bisnis Anda",
+        "slug": "mengapa-cloud-computing-menjadi-investasi-wajib-untuk-bisnis-anda",
+        "description": "Dalam dunia yang semakin terhubung, cloud computing telah muncul sebagai salah satu inovasi teknologi terbesar yang mengubah cara perusahaan beroperasi. Teknologi ini tidak hanya meningkatkan efisiensi operasional, tetapi juga memberikan fleksibilitas dan skalabilitas yang memungkinkan bisnis untuk tumbuh dan beradaptasi dengan cepat.",
+        "tags": null,
+        "creator": null,
+        "category": "BusinessTechnologyManagement",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/shiny-night-city-1733232607460.jpg"
+    },
+    {
+        "id": 24,
+        "title": "Manajemen Agile vs Waterfall: Mana yang Lebih Cocok untuk Proyek Anda",
+        "slug": "manajemen-agile-vs-waterfall-mana-yang-lebih-cocok-untuk-proyek-anda",
+        "description": "Dalam dunia pengelolaan proyek teknologi, memilih metode yang tepat sangat menentukan keberhasilan implementasi. Dua pendekatan yang paling sering dibahas adalah Waterfall dan Agile, masing-masing dengan kelebihan dan pendekatan yang berbeda.",
+        "tags": null,
+        "creator": null,
+        "category": "BusinessTechnologyManagement",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/COLLAB~1-1733233182655.JPG"
+    },
+    {
+        "id": 25,
+        "title": "Membangun Platform Edukasi Online: Solusi untuk Pembelajaran Jarak Jauh di Era Digital",
+        "slug": "membangun-platform-edukasi-online-solusi-untuk-pembelajaran-jarak-jauh-di-era-digital",
+        "description": "Di era digital, teknologi telah menjadi elemen penting dalam hampir semua aspek kehidupan, termasuk pendidikan. Dengan meningkatnya kebutuhan pembelajaran jarak jauh, platform edukasi online menjadi solusi utama untuk mengatasi tantangan aksesibilitas, fleksibilitas, dan efisiensi pembelajaran.",
+        "tags": null,
+        "creator": null,
+        "category": "ProjectCasesStudy",
+        "created_at": "2024-12-03 12:43:35.370",
+        "updated_at": "2024-12-03 12:43:35.370",
+        "thumbnail": "/images/assets/content/learning app-1733233472947.jpg"
+    }
+]

@@ -6,7 +6,8 @@ import ButtonComponent from "../atom/Button";
 import WhatsappIcon from "../atom/icons/WhatsappIcon";
 import EmailIcon from "../atom/icons/EmailIcon";
 import Link from "next/link";
-import {sendEmail} from '../../utils/lib/fetchContact'
+// import {sendEmail} from '../../utils/lib/fetchContact'
+import m$contact from '../../backend/modules/ContactModule'
 
 const FormContact = () => {
   const [emailValue, setEmailValue] = useState<string|number| File|null>('');
@@ -15,6 +16,7 @@ const FormContact = () => {
   const [companyValue, setCompanyValue] = useState<string|number| File|null>(
     ''
   );
+  const [isLoad, setIsLoad] = useState<boolean>(false)
   const [messageValue, setMessageValue] = useState<string | number | null>(
     ''
   );
@@ -56,8 +58,10 @@ const FormContact = () => {
     messageValue
   ]);
   const actionSendEmail = async() => {
-    const response = await sendEmail(dataRequest)
+    setIsLoad(true)
+    const response = await m$contact.sendEmail(dataRequest)
     if(response){
+      setIsLoad(false)
       console.log(response)
       setEmailValue(null)
       setPhoneValue(null)
@@ -90,7 +94,7 @@ const FormContact = () => {
                   <WhatsappIcon />
                 </Link>
                 <Link
-                  href={"mailto:oqbsoftware@gmail.com"}
+                  href={"mailto:contact@oqbsoftware.com"}
                   className="w-10 h-10 text-gray-500 hover:text-white hover:cursor-pointer"
                 >
                   <EmailIcon />
@@ -154,6 +158,14 @@ const FormContact = () => {
           <ButtonComponent
             onClick={actionSendEmail}
             propsClass="bg-purple font-semibold w-full lg:w-52 h-[56px] rounded-[50px] hover:bg-navy text-navy hover:text-greenWhite hover:shadow-xl"
+            content = {
+              <>{ isLoad ? (
+                <div className="loader"></div>
+              ):(
+                <>Submit</>
+              )}
+              </>
+            }
           />
         </div>
       </div>

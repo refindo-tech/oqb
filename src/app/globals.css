@@ -39,8 +39,8 @@ body {
   animation: l5 1s infinite linear alternate;
 }
 @keyframes l5 {
-    0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
-    33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
-    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
-    100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+    0%  {box-shadow: 20px 0 #ffffff, -20px 0 rgba(228, 228, 228, 0.133);background: #fff }
+    33% {box-shadow: 20px 0 #ffffff, -20px 0 rgba(228, 228, 228, 0.133);background: rgba(228, 228, 228, 0.133)}
+    66% {box-shadow: 20px 0 rgba(228, 228, 228, 0.133),-20px 0 #fff; background: rgba(228, 228, 228, 0.133)}
+    100%{box-shadow: 20px 0 rgba(228, 228, 228, 0.133),-20px 0 #fff; background: #fff }
 }
