@@ -1,30 +1,31 @@
 import React from "react";
-import ButtonComponent from "@/components/atom/Button";
-import Image from "next/image";
-const HeroComponent = () => {
+import Link from "next/link";
+// import Image from "next/image";
+interface propsHeroCompoonents {
+  path:string
+  title:React.ReactNode; // Mendukung string atau JSX
+  description:string
+}
+const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}) => {
   return (
-    <div className="min-h-[80vh] bg-biru py-20 flex justify-center">
-      <div className="w-[90%] flex flex-wrap lg:flex-nowrap items-center">
-        <div className="flex flex-col gap-10 text-white/70">
-          <h1 className="text-5xl font-bold font-roboto text-white">
-            Mari Tingkatkan Kepuasan <br /> Klien Anda
+    // bg-gradient-to-t from-greenWhite/20 to-transparent
+    <div 
+      className={`h-screen bg-center bg-cover bg-fixed`}
+      style={{
+        backgroundImage: `url(${path})`, // Gunakan style inline untuk background-image
+      }}
+    >
+      <div className="w-full h-full flex justify-center bg-black/20 lg:pt-20 pb-20 pt-28">
+        <div className="w-[80%] flex flex-col items-start justify-center gap-10 text-white/70">
+          <h1 className="text-3xl lg:text-7xl font-bold font-roboto text-greenWhite px-3">
+            {title}
           </h1>
-          <p className="font-poppins text-xl">
-            Tingkatkan kepuasan klien saat mengakses produk anda secara digital,
-            menggunakkan produk dari kami
+          <p className="font-poppins text-xl px-3 text-blueWhite">
+            {description}
           </p>
-          <ButtonComponent
-            content={"Lihat lebih detail"}
-            propsClass="bg-orange-500 font-semibold w-52 h-[56px] rounded-2xl"
-          />
-        </div>
-        <div className="min-w-[50%]">
-          <Image
-            src={'/images/logo_oqb.png'}
-            alt="hero-image"
-            width={600}
-            height={600}
-          />
+          <Link prefetch={true} href={'/contact#contact'} className="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-full text-greenWhite hover:text-navy flex items-center justify-center">
+            Start Consultation
+          </Link>
         </div>
       </div>
     </div>

@@ -1,11 +1,31 @@
-import React from "react"
-const TextareaForm : React.FC<{placeholder:string; autoFocus?:boolean}> = ({placeholder, autoFocus=false}) => {
-    return(
-        <textarea
-            className=" border-orange-500 p-2 w-full h-40 rounded"
-            placeholder= {placeholder}
-            autoFocus={autoFocus}
-        />
-    )
+import React from "react";
+interface propsTextareaForm {
+  placeholder: string;
+  name: string;
+  value: string | number | null;
+  handleValue: (value: string | number | null) => void;
+  autoFocus?: boolean;
 }
-export default TextareaForm
+const TextareaForm: React.FC<propsTextareaForm> = ({
+  name,
+  placeholder,
+  value,
+  autoFocus = false,
+  handleValue,
+}) => {
+  const handleProps = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const val = e.target.value;
+    handleValue(val);
+  };
+  return (
+    <textarea
+      name={name}
+      value={value ?? ""}
+      onChange={handleProps}
+      className="text-white border-orange-500 w-full h-40 rounded-3xl bg-white/30 backdrop-blur-sm placeholder:text-white/70 placeholder:font-semibold text-lg p-5"
+      placeholder={placeholder}
+      autoFocus={autoFocus}
+    />
+  );
+};
+export default TextareaForm;
