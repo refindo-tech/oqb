@@ -92,7 +92,7 @@ const FormContact = () => {
                   <WhatsappIcon />
                 </Link>
                 <Link
-                  href={"mailto:oqbsoftware@gmail.com"}
+                  href={"mailto:contact@oqbsoftware.com"}
                   className="w-10 h-10 text-gray-500 hover:text-white hover:cursor-pointer"
                 >
                   <EmailIcon />
