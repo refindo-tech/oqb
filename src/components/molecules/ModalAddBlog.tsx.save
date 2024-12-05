@@ -11,11 +11,10 @@ const QuillEditor = dynamic(() => import("@/components/molecules/RichText"), {
   ssr: false,
 });
 type dataRequest = {
-  title: string | number | null;
-  description: string | number | null;
-  thumbnail: string | number | null;
-  content: string | number | null;
-  slug: string | number | null;
+  title: string | number | null| Fi  description: string | number | null | File;
+  thumbnail: string | number | null | File;
+  content: string | number | null | File;
+  slug: string | number | null | File;
   category:string
 };
 import "react-quill-new/dist/quill.snow.css";
@@ -29,13 +28,13 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
 }) => {
   const [content, setContent] = useState<string>("");
   const [descriptionValue, setDescriptionValue] = useState<
-    string | number | null
+    string | number | File | null
   >("");
-  const [titleValue, setTitleValue] = useState<string | number | null>(
+  const [titleValue, setTitleValue] = useState<string | number | File | null>(
     ""
   );
   const [thumbnailValue, setThumbnailValue] = useState<
-    string | number | null
+    string | number | File | null
   >("");
   const [slugValue, setSlugValue] = useState<string>("");
   const [isLoad, setIsLoad] = useState<boolean>(false);
@@ -45,13 +44,13 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
   const handleContentChange = (value: string) => {
     setContent(value);
   };
-  const handleDescriptionValue = (value: string | number | null) => {
+  const handleDescriptionValue = (value: string | number | File | null) => {
     setDescriptionValue(value);
   };
-  const handleTitleValue = (value: string | number | null) => {
+  const handleTitleValue = (value: string | number | File | null) => {
     setTitleValue(value);
   };
-  const handleThumbnail = (value: string | number | null) => {
+  const handleThumbnail = (value: string | number | File | null) => {
     setThumbnailValue(value);
   };
   const handleCategoryValue = (value:string) => {

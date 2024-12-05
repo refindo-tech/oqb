@@ -38,7 +38,7 @@ const CardBlog: React.FC<propsCardBlog> = ({
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0 z-10 p-3 flex flex-grow flex-col justify-end items-end gap-5 bg-gradient-to-t from-[#1c1678]/100  to-gray-700/50 rounded-lg">
             <div className="w-full flex flex-col gap-3 h-[40%] justify-start">
-              <h3 className="font-semibold text-2xl text-greenWhite hover:text-purple">
+              <h3 className="font-semibold text-2xl text-greenWhite hover:text-purple line-clamp-2">
                 {title}
               </h3>
               <p className="line-clamp-2 text-blueWhite text-lg">

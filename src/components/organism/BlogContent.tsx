@@ -58,7 +58,7 @@ const BlogContent = () => {
                     </div> */}
           <div
             id="quill-content"
-            className=" mt-5 ql-editor font-serif"
+            className=" mt-5 ql-editor font-poppins leading-loose"
             dangerouslySetInnerHTML={{__html:dataContent.content}}
             style={{
                 wordWrap: "break-word",
