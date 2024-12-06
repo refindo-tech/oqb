@@ -93,7 +93,7 @@ const Navbar = () => {
                 <p>{item.title}</p>
               </Link>
               {item.submenu && showDropdown && (
-                <div className="absolute flex flex-col p-4 gap-3 w-[330] bg-[#1c1678] rounded shadow-xl text-blueWhite mt-2">
+                <div className="absolute flex flex-col p-4 gap-3 w-[330px] bg-[#1c1678] rounded shadow-xl text-blueWhite mt-2">
                   {item.submenu.map((subitem, index) => (
                     // <div className="flex flex-col gap-4" key={index}>
                     //   <h2 className="text-greenWhite">
