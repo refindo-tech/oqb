@@ -138,11 +138,11 @@ const ProjectPhases = () => {
           </div>
         </div>
       </div>
-      <div className="lg:hidden min-h-[70vh] w-full flex flex-col">
-        <h2 className="text-3xl font-roboto font-semibold text-center text-greenWhite">
+      <div className="lg:hidden w-full flex flex-col">
+        <h2 className="text-3xl font-roboto font-semibold text-center text-greenWhite mb-5">
           Project Phases
         </h2>
-        <div className="flex flex-grow">
+        <div className="flex flex-[370px] items-center">
           <StepCarousel />
         </div>
       </div>

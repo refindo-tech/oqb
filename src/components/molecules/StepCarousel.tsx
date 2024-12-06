@@ -16,6 +16,7 @@ export default function StepCarousel() {
     <>
       <Swiper
         effect={"coverflow"}
+        style={{marginBottom:'40px'}}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}

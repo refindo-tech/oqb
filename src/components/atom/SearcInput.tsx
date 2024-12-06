@@ -23,7 +23,7 @@ const SearchInput:React.FC<propsSearchInput> = ({handleValue}) => {
             />
             <ButtonComponent
                 onClick={()=>handleValue(searchValue)} 
-                propsClass="rounded-tr-full rounded-br-full bg-gray-500/50 hover:bg-gray-500/70 backdrop-blur p-1 h-full w-[50]  flex items-center hocer:border-blue-600 justify-center"
+                propsClass="rounded-tr-full rounded-br-full bg-gray-500/50 hover:bg-gray-500/70 backdrop-blur p-3 h-full w-[50]  flex items-center hocer:border-blue-600 justify-center"
                 content={
                     <Search />
                 }

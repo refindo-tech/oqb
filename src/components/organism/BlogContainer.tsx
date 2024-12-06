@@ -80,7 +80,7 @@ const BlogContainer = () => {
     return(
         <article className="min-h-screen w-full flex justify-center p-5 lg:p-10">
             <div className="w-full lg:w-[90%] flex flex-wrap-reverse lg:flex-nowrap gap-5">
-                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {dataListBlog && dataListBlog?.map((item, index)=>(
                         <CardBlog title={`${item.title}`} slug={`${item.slug}`} description={`${item.description}`} thumbnail={item.thumbnail} key={index}/>
                     ))}
@@ -94,7 +94,7 @@ const BlogContainer = () => {
                         {categoryOption.map((item, index)=>(
                             <ButtonComponent
                                 key={index}
-                                propsClass={`text-center text-nowrap bg-transparent hover:bg-purple hover:text-navy border-2 border-purple rounded-full text-left font-semibold p-3 text-blueWhite ${item.label === "All" ? 'w-[70]': 'w-fit'}`}
+                                propsClass={`text-center text-nowrap bg-transparent hover:bg-purple hover:text-navy border-2 border-purple rounded-full text-left font-semibold p-3 text-blueWhite ${item.label === "All" && 'w-[70px]'}`}
                                 onClick={()=>handleCategory(item.value)}
                                 content={
                                     <>{item.label}
