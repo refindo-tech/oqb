@@ -34,10 +34,10 @@ const Footer = () => {
           <div id="layanan-footer" className="flex flex-col gap-3 text-white">
             <h5 className="text-white font-semibold text-2xl">Services</h5>
             <div className="flex flex-col gap-1 text-white/70">
-              <Link href={"/profile#services"}>Website Design & Development</Link>
-              <Link href={"/profile#services"}>Mobile App Design & Development</Link>
-              <Link href={"/profile#services"}>Multiplatform App Design & Development</Link>
-              <Link href={"/profile#services"}>System Integration</Link>
+              <Link href={"/#services"}>Website Design & Development</Link>
+              <Link href={"/#services"}>Mobile App Design & Development</Link>
+              <Link href={"/#services"}>Multiplatform App Design & Development</Link>
+              <Link href={"/#services"}>System Integration</Link>
             </div>
           </div>
           <div
