@@ -78,7 +78,7 @@ const BlogContent = () => {
                     </div> */}
           <div
             id="quill-content"
-            className=" mt-5 ql-editor font-poppins px-0"
+            className=" mt-5 ql-editor font-poppins ql-content px-0"
             dangerouslySetInnerHTML={{ __html: dataContent.content }}
             style={{
               wordWrap: "break-word",

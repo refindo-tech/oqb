@@ -1,49 +1,26 @@
+import React from "react";
 import CardBenefit from "../atom/CardBenefit";
-const Benefit = () => {
+import Translate from "@/utils/type/translateType";
+const Benefit: React.FC<{ translate: Translate }> = ({ translate }) => {
   return (
     <article className="min-h-[60vh] w-full py-10  flex flex-col flex-wrap lg:flex-nowrap items-center justify-center gap-10">
       <div className="w-[80%] flex flex-col gap-5 text-center">
         <h2 className="font-bold text-3xl text-greenWhite ">
-          Why Choose Us?
+          {translate.Home.Benefit.header}
         </h2>
         <p className="text-lg text-blueWhite ">
-          We are guided by the principle that every solution we build must
-          embody quality, collaboration, and purpose.
+          {translate.Home.Benefit.description}
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-y-1 gap-x-3">
-        <CardBenefit
-          path="/images/assets/commitment.svg"
-          title="Commitment to Quality"
-          description={
-            "We’re driven by the belief that true quality is achieved through dedication and attention to detail. Every software development project is a testament to our pursuit of excellence"
-          }
-        />
-        <CardBenefit
-          path="/images/assets/experience.svg"
-          title="Credible Experience"
-          description="With diverse portfolio, our software development services are
-            grounded in a deep understanding of the unique challenges each
-            sector faces. We don’t just deliver solutions; we listen, we learn,
-            and we craft what truly matters"
-        />
-        {/* </div> */}
-        {/* <div className="flex flex-col gap-10"> */}
-        <CardBenefit
-          path="/images/assets/collaborative.svg"
-          title="Collaborative Approach"
-          description="Your vision guides our process. We take the time to understand your
-            needs, ensuring our solutions not only meet expectations but also
-            elevate your goals to new heights"
-        />
-        <CardBenefit
-          path="/images/assets/continous.svg"
-          title="Continuous Support"
-          description="We view every project as the start of a long-term relationship. Our
-            work doesn’t end with deployment; we stay by your side with
-            guarantee maintenance, ensuring your application development project
-            continues to perform optimally"
-        />
+        {translate.Home.Benefit.item.map((item, index) => (
+          <CardBenefit
+            path={item.path}
+            title={item.title}
+            description={item.description}
+            key={index}
+          />
+        ))}
       </div>
     </article>
   );

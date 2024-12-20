@@ -1,10 +1,26 @@
 "use client";
+import React from "react";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import HamburgerMenu from "@/components/molecules/HamburgerMenu";
 import Image from "next/image";
 import Link from "next/link";
-const Navbar = () => {
+import { Globe } from "lucide-react";
+// import ButtonComponent from "../atom/Button";
+// import { getLocale } from "@/middleware";
+import Translate from "@/utils/type/translateType";
+const Navbar:React.FC<{translate:Translate}> = ({translate}) => {
   const [isScroll, setIsScroll] = useState(false);
+  // const router = useRouter()
+  const path = usePathname()
+  const [lang, setLang] = useState<string>("id");
+  useEffect(()=>{
+    const lang = path.split('/')[1]
+    const handlerLanguage = (val:string) => {
+      setLang(val);
+    };
+    handlerLanguage(lang)
+  },[path])
   const [styleNavbar, setStyleNavbar] = useState(
     "bg-transparent text-gray-700 hover:text-white"
   );
@@ -38,30 +54,7 @@ const Navbar = () => {
   const showHamburger = () => {
     setIsShowHamburger(!isShowHamburger);
   };
-  const menu = [
-    { title: "Home", href: "/" },
-    { title: "Services", href: "/#services" },
-    {
-      title: "Insight",
-      href: "/insight",
-      submenu: [
-        {
-          category: "Technology & Trend",
-        },
-        {
-          category: "Education & Tutorial",
-        },
-        {
-          category: "Project Case Study",
-        },
-        {
-          category: "Business Technology Management",
-        }
-      ],
-    },
-    { title: "Contact", href: "/contact" },
-    { title: "About Us", href: "/about-us" },
-  ];
+  const menu = translate.common.Navbar.menu
   return (
     <header
       className={`w-full flex ${styleNavbar} justify-center h-16 fixed top-0 left-0 right-0 transition-all ease-in-out duration-1000 z-20`}
@@ -89,17 +82,12 @@ const Navbar = () => {
                 }
               }}
             >
-              <Link prefetch={true} href={item.href}>
+              <Link prefetch={true} href={`/${lang}/${item.href}`}>
                 <p>{item.title}</p>
               </Link>
               {item.submenu && showDropdown && (
                 <div className="absolute flex flex-col p-4 gap-3 w-[330px] bg-[#1c1678] rounded shadow-xl text-blueWhite mt-2">
                   {item.submenu.map((subitem, index) => (
-                    // <div className="flex flex-col gap-4" key={index}>
-                    //   <h2 className="text-greenWhite">
-                    //     {subitem.category}
-                    //   </h2>
-                    // </div>
                     <Link
                       prefetch={true}
                       className="hover:text-greenWhite"
@@ -113,8 +101,30 @@ const Navbar = () => {
               )}
             </div>
           ))}
+          <div className="flex items-center gap-3 text-greenWhite">
+            <Globe size={20} />
+            {lang === "id" && (
+              <Link
+                prefetch={true}
+                href={`/en/${path.split('/id')[1]}`}
+                className="text-greenWhite  hover:text-white"
+              >
+                ID
+              </Link>
+            )}
+            {lang === "en" && (
+              <Link
+                prefetch={true}
+                href={`/id${path.split('/en')[1]}`}
+                className="text-greenWhite  hover:text-white"
+              >
+                EN
+              </Link>
+            )}
+          </div>
         </div>
         <HamburgerMenu
+          translate={translate}
           onClick={showHamburger}
           isShowMenu={isShowHamburger}
           isScroll={isScroll}

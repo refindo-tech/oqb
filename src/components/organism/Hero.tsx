@@ -4,9 +4,10 @@ import Link from "next/link";
 interface propsHeroCompoonents {
   path:string
   title:React.ReactNode; // Mendukung string atau JSX
-  description:string
+  description:string;
+  contentButton:string;
 }
-const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}) => {
+const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description, contentButton}) => {
   return (
     // bg-gradient-to-t from-greenWhite/20 to-transparent
     <div 
@@ -24,7 +25,7 @@ const HeroComponent:React.FC<propsHeroCompoonents> = ({path, title, description}
             {description}
           </p>
           <Link prefetch={true} href={'/contact#contact'} className="bg-transparent border-2 border-purple hover:bg-purple font-semibold w-52 h-[56px] rounded-full text-greenWhite hover:text-navy flex items-center justify-center">
-            Start Consultation
+            {contentButton}
           </Link>
         </div>
       </div>

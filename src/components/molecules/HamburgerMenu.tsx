@@ -3,22 +3,30 @@ import React from "react";
 import Link from "next/link";
 import { Menu, X, ChevronUp, ChevronDown } from "lucide-react";
 import ButtonComponent from "../atom/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Translate from "@/utils/type/translateType";
 const HamburgerMenu: React.FC<{
   onClick: () => void;
   isShowMenu: boolean;
   isScroll: boolean;
-}> = ({ onClick, isShowMenu, isScroll }) => {
+  translate: Translate;
+}> = ({ onClick, isShowMenu, isScroll, translate }) => {
   const [isDropdown, setIsDropdown] = useState<boolean>(false);
-  const category = [
-    "Technology & Trend",
-    "Education & Tutorial",
-    "Project Case Study",
-    "Business Technology Management",
-  ];
   const handleDropdown = () => {
     setIsDropdown(!isDropdown);
   };
+  const path = usePathname()
+  const locale = path.split('/')[1]
+  const [lang, setLang] =  useState<"id"|"en">("en")
+  useEffect(()=>{
+    const handleLang = (val:"id"|"en") => {
+      setLang(val)
+    }
+    if(locale === "id" || locale === "en"){
+      handleLang(locale)
+    }
+  },[locale])
   return (
     <>
       <button onClick={onClick} className="lg:hidden">
@@ -43,39 +51,51 @@ const HamburgerMenu: React.FC<{
             </button>
           </div>
           <div className="w-[70%] mx-auto flex flex-col gap-3">
-            <Link href="/">Home</Link>
-            <Link href="/#services">Services</Link>
-            <div className="flex justify-between">
-              <Link href="/insight">Insight</Link>
-              <ButtonComponent
-                onClick={handleDropdown}
-                propsClass="p-0 bg-transparent"
-                content={
-                  <>
-                    {isDropdown ? (
-                      <ChevronUp size={16} />
-                    ) : (
-                      <ChevronDown size={16} />
-                    )}
-                  </>
-                }
-              />
+            <div className="flex gap-3">
+              <Link prefetch={true} href={`/en/${path.split(`/${lang}`)[1]}`}>EN</Link>
+              |
+              <Link prefetch={true} href={`/id/${path.split(`/${lang}`)[1]}`}>ID</Link>
             </div>
-            {isDropdown && (
-              <div className="flex flex-col gap- pl-3">
-                {category.map((item, index) => (
-                  <Link
-                    href="/insight"
-                    key={index}
-                    className=" pb-2 text-white/70"
-                  >
-                    {item}
+            {translate.common.Navbar.menu.map((item, index) => (
+              <div key={index}>
+                {item.submenu ? (
+                  <div className="flex justify-between flex-wrap">
+                    <Link prefetch={true} href={`/${lang}/${item.href}`}>{item.title}</Link>
+                    <ButtonComponent
+                      onClick={handleDropdown}
+                      propsClass="p-0 bg-transparent"
+                      content={
+                        <>
+                          {isDropdown ? (
+                            <ChevronUp size={16} />
+                          ) : (
+                            <ChevronDown size={16} />
+                          )}
+                        </>
+                      }
+                    />
+                    {isDropdown && (
+                      <div className="w-full flex flex-col gap- pl-3">
+                        {item.submenu.map((item, index) => (
+                          <Link
+                            prefetch={true}
+                            href={`/${lang}/insight`}
+                            key={index}
+                            className=" pb-2 text-white/70"
+                          >
+                            {item.category}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link prefetch={true} href={`/${lang}/${item.href}`}>
+                    {item.title}
                   </Link>
-                ))}
+                )}
               </div>
-            )}
-            <Link href="/contact">Contact</Link>
-            <Link href="/about-us">About Us</Link>
+            ))}
           </div>
         </div>
       )}
