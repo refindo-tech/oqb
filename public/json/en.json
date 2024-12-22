@@ -1,0 +1,254 @@
+{
+    "Home": {
+        "Hero": {
+            "header": "Build Quality Software <br/> Optimize Your Workflow",
+            "description": "We believe that software should do more than just function, it should inspire progress",
+            "Button": "Start Consultation"
+        },
+        "Services": {
+            "header": "Our Services",
+            "description": "Discover tailored solutions designed to meet your unique needs. From custom software development to system integration, our services empower your business with innovative technology and seamless execution"
+        },
+        "Benefit": {
+            "header": "Why Choose Us?",
+            "description": "We are guided by the principle that every solution we build must embody quality, collaboration, and purpose.",
+            "item": [
+                {
+                    "title": "Commitment to Quality",
+                    "description": "Kami didorong oleh keyakinan bahwa kualitas sejati dicapai melalui dedikasi dan perhatian terhadap detail. Setiap proyek pengembangan perangkat lunak adalah bukti dari upaya kami untuk mencapai keunggulan",
+                    "path": "/images/assets/commitment.svg"
+                },
+                {
+                    "title": "Credible Experience",
+                    "description": "Dengan portofolio yang beragam, layanan pengembangan perangkat lunak kami didasarkan pada pemahaman mendalam tentang tantangan unik yang dihadapi setiap sektor. Kami tidak hanya memberikan solusi; kami mendengarkan, belajar, dan membuat apa yang benar-benar penting",
+                    "path": "/images/assets/experience.svg"
+                },
+                {
+                    "title": "Collaborative Approach",
+                    "description": "Visi Anda memandu proses kami. Kami meluangkan waktu untuk memahami kebutuhan Anda, memastikan solusi kami tidak hanya memenuhi harapan, tetapi juga meningkatkan tujuan Anda ke tingkat yang lebih tinggi",
+                    "path": "/images/assets/collaborative.svg"
+                },
+                {
+                    "title": "Continous Support",
+                    "description": "Kami memandang setiap proyek sebagai awal dari hubungan jangka panjang. Pekerjaan kami tidak berakhir dengan penerapan; kami tetap berada di sisi Anda dengan jaminan pemeliharaan, memastikan proyek pengembangan aplikasi Anda terus bekerja secara optimal",
+                    "path": "/images/assets/continous.svg"
+                }
+            ]
+        },
+        "Vision": {
+            "header": "Transforming Ideas into Impact",
+            "description": "We are here to empower organizations to unlock their potential by transforming visionary ideas into impactful and sustainable digital solutions. We strive to be a trusted partner in delivering custom software applications that drive growth, optimize workflows, and support innovation."
+        },
+        "ProjectPhase": {
+            "header": "Project Phase",
+            "item": [
+                {
+                    "number": 1,
+                    "title": "Discuss The Project",
+                    "description": "Discussion of the project and collection of information on requirements and supporting data."
+                },
+                {
+                    "number": 2,
+                    "title": "Research & Analysis",
+                    "description": "The process of requirements analysis, finding solutions, creating concept plans and application creation strategies."
+                },
+                {
+                    "number": 3,
+                    "title": "Concept Submission",
+                    "description": "The process of submitting plans and concept designs for applications that have been created to clients."
+                },
+                {
+                    "number": 4,
+                    "title": "Prototype",
+                    "description": "The process of creating a prototype or initial design of an application such as application design and system design."
+                },
+                {
+                    "number": 5,
+                    "title": "Development",
+                    "description": "The process of creating and developing applications from prototypes and designs that have been created."
+                },
+                {
+                    "number": 6,
+                    "title": "Testing",
+                    "description": "The process of rechecking and testing to ensure the application's functionality can run perfectly."
+                },
+                {
+                    "number": 7,
+                    "title": "Pre Deployment",
+                    "description": "The process of carried out in preparation for the deployment process."
+                },
+                {
+                    "number": 8,
+                    "title": "Deployment",
+                    "description": "The application installation process on the server and user. And the application is ready to use."
+                },
+                {
+                    "number": 9,
+                    "title": "Maintenance Warranty",
+                    "description": "Ensures the application continues to function properly, fixes any bugs found, and provides technical support to users during the warranty period."
+                },
+                {
+                    "number": 10,
+                    "title": "Finish",
+                    "description": "The final stage where the application project is declared complete, the application will be fully handed over to the client."
+                }
+            ]
+        },
+        "LastBlog": {
+            "title": "Insight",
+            "description": "Read Our Latest Articles"
+        }
+    },
+    "aboutUs": {
+        "Hero": {
+            "header": "Who We Are <br/> What Drives Us",
+            "description": "Explore how our expertise can help you",
+            "Button": "Start Consultation"
+        },
+        "sector": {
+            "header": "Partner In Your Vision",
+            "description": "PT. OQB Software House is a professional software house that offers trusted digital solutions. Realize business efficiency with the best services with innovative technology. <br /> <br /> We empower organizations to unlock their potential by transforming visionary ideas into impactful digital solutions and impactful and sustainable digital solutions. We strive to be a trusted partner in delivering custom software applications that drive growth, optimize workflows, and support innovation.",
+            "category": [
+                {
+                    "count": 20,
+                    "sector": "Proyek Perusahaan"
+                },
+                {
+                    "count": 1,
+                    "sector": "Proyek Pemerintahan"
+                },
+                {
+                    "count": 5,
+                    "sector": "Proyek Institusi Pendidikan"
+                }
+            ]
+        },
+        "Client":{
+            "t":"Our Clients"
+        }
+    },
+    "insight": {
+        "Hero": {
+            "header": "Stay Informed <br /> Stay Ahead",
+            "description": "Discover the latest trends, tutorials, case studies, and strategies to drive your business and technology forward",
+            "Button": "Start Consultation"
+        },
+        "CategoryArticle": [
+            {
+                "value": "",
+                "label": "All"
+            },
+            {
+                "value": "TechnologyTrend",
+                "label": "Technology & Trend"
+            },
+            {
+                "value": "EducationTutorial",
+                "label": "Education & Tutorial"
+            },
+            {
+                "value": "ProjectCasesStudy",
+                "label": "Project Case Study"
+            },
+            {
+                "value": "BusinessTechnologyManagement",
+                "label": " Business Technology Management"
+            }
+        ]
+    },
+    "common": {
+        "Testimony": {
+            "header": "Clients Experiences",
+            "description": "Every project is more than just a task; it’s a partnership built on trust, collaboration, and shared goals. Their testimonials speak to the quality of our work and the strength of our relationships.",
+            "item": [
+                {
+                    "message": "Our new web application allows students to keep up with their studies even when they can’t be in class. The blended learning approach really keeps students engaged, and teachers love how easy it is to share materials and assignments",
+                    "name": "Mulki Siti Hajar Rezaini, M.Pd.",
+                    "position": "Teacher at Senior High School 3 in Serang City"
+                },
+                {
+                    "message": "The application developed precisely meets the partner’s needs. The project was swiftly completed. Good job!",
+                    "name": "Anggoro Suryo Pramudyo, M.Kom.",
+                    "position": "Research Secretary at Kedaireka"
+                },
+                {
+                    "message": "I hope we can work together again on future projects",
+                    "name": "Danik Mulya Sari, S.Pd.Si.",
+                    "position": "Principal of Irsyadul Ibad 2 Pandeglang"
+                },
+                {
+                    "message": "The performance is great! The results are just what I needed",
+                    "name": "Dicky Lumena",
+                    "position": "Owner of Netplus Connection"
+                }
+            ]
+        },
+        "ContactForm": {
+            "header": "Contact Us",
+            "description": "We are ready to provide solutions and look forward to discussing how we can help",
+            "button": "Submit"
+        },
+        "Navbar": {
+            "menu": [
+                {
+                    "title": "Home",
+                    "href": "/"
+                },
+                {
+                    "title": "Services",
+                    "href": "/#services"
+                },
+                {
+                    "title": "Insight",
+                    "href": "/insight",
+                    "submenu": [
+                        {
+                            "category": "Technology & Trend"
+                        },
+                        {
+                            "category": "Education & Tutorial"
+                        },
+                        {
+                            "category": "Project Case Study"
+                        },
+                        {
+                            "category": "Business Technology Management"
+                        }
+                    ]
+                },
+                {
+                    "title": "Contact",
+                    "href": "/contact"
+                },
+                {
+                    "title": "About Us",
+                    "href": "/about-us"
+                }
+            ]
+        },
+        "Footer": {
+            "Services": "Services",
+            "Insight": {
+                "t": "Insight",
+                "category": [
+                    {
+                        "name": "Technology & Trend",
+                        "href": "/insight"
+                    },
+                    {
+                        "name": "Education & Tutorial",
+                        "href": "/insight"
+                    },
+                    {
+                        "name": "Project Cases Study",
+                        "href": "/insight"
+                    },
+                    {
+                        "name": "Business Technology Management",
+                        "href": "/insight"
+                    }
+                ]
+            }
+        }
+    }
+}

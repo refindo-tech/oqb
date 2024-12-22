@@ -1,0 +1,254 @@
+{
+    "Home": {
+        "Hero": {
+            "header": "Membangun Perangkat Lunak Berkualitas <br/> Optimalkan Alur Kerja Anda",
+            "description": "Kami percaya bahwa perangkat lunak harus melakukan lebih dari sekadar fungsi, tetapi juga harus menginspirasi kemajuan",
+            "Button": "Mulai Konsulltasi"
+        },
+        "Services": {
+            "header": "Layanan Kami",
+            "description": "Temukan solusi khusus yang dirancang untuk memenuhi kebutuhan unik Anda. Mulai dari pengembangan perangkat lunak khusus hingga integrasi sistem, layanan kami memberdayakan bisnis Anda dengan teknologi inovatif dan eksekusi yang mulus"
+        },
+        "Benefit": {
+            "header": "Mengapa Memilih Kami?",
+            "description": "Kami dipandu oleh prinsip bahwa setiap solusi yang kami bangun harus mewujudkan kualitas, kolaborasi, dan tujuan.",
+            "item": [
+                {
+                    "title": "Komitmen terhadap Kualitas",
+                    "description": "Kami didorong oleh keyakinan bahwa kualitas sejati dicapai melalui dedikasi dan perhatian terhadap detail. Setiap proyek pengembangan perangkat lunak adalah bukti dari upaya kami untuk mencapai keunggulan",
+                    "path": "/images/assets/commitment.svg"
+                },
+                {
+                    "title": "Pengalaman yang Kredibel",
+                    "description": "Dengan portofolio yang beragam, layanan pengembangan perangkat lunak kami didasarkan pada pemahaman mendalam tentang tantangan unik yang dihadapi setiap sektor. Kami tidak hanya memberikan solusi; kami mendengarkan, belajar, dan membuat apa yang benar-benar penting",
+                    "path": "/images/assets/experience.svg"
+                },
+                {
+                    "title": "Pendekatan Kolaboratif",
+                    "description": "Visi Anda memandu proses kami. Kami meluangkan waktu untuk memahami kebutuhan Anda, memastikan solusi kami tidak hanya memenuhi harapan, tetapi juga meningkatkan tujuan Anda ke tingkat yang lebih tinggi",
+                    "path": "/images/assets/collaborative.svg"
+                },
+                {
+                    "title": "Dukungan Keberlanjutan",
+                    "description": "Kami memandang setiap proyek sebagai awal dari hubungan jangka panjang. Pekerjaan kami tidak berakhir dengan penerapan; kami tetap berada di sisi Anda dengan jaminan pemeliharaan, memastikan proyek pengembangan aplikasi Anda terus bekerja secara optimal",
+                    "path": "/images/assets/continous.svg"
+                }
+            ]
+        },
+        "Vision": {
+            "header": "Mengubah Ide Menjadi Dampak",
+            "description": "Kami hadir untuk memberdayakan organisasi agar dapat membuka potensi mereka dengan mengubah ide-ide visioner menjadi solusi digital yang berdampak dan berkelanjutan. Kami berusaha untuk menjadi mitra tepercaya dalam memberikan aplikasi perangkat lunak khusus yang mendorong pertumbuhan, mengoptimalkan alur kerja, dan mendukung inovasi."
+        },
+        "ProjectPhase": {
+            "header": "Alur Proyek",
+            "item": [
+                {
+                    "number": 1,
+                    "title": "Diskusikan Proyek",
+                    "description": "Diskusi tentang proyek dan pengumpulan informasi tentang persyaratan dan data pendukung."
+                },
+                {
+                    "number": 2,
+                    "title": "Penelitian & Analisis",
+                    "description": "Proses analisis kebutuhan, menemukan solusi, membuat rencana konsep dan strategi pembuatan aplikasi."
+                },
+                {
+                    "number": 3,
+                    "title": "Pengajuan Konsep",
+                    "description": "Proses pengajuan rencana dan desain konsep untuk aplikasi yang telah dibuat kepada klien."
+                },
+                {
+                    "number": 4,
+                    "title": "Prototipe",
+                    "description": "Proses pembuatan prototipe atau desain awal dari sebuah aplikasi seperti desain aplikasi dan desain sistem."
+                },
+                {
+                    "number": 5,
+                    "title": "Pengembangan",
+                    "description": "Proses membuat dan mengembangkan aplikasi dari prototipe dan desain yang telah dibuat."
+                },
+                {
+                    "number": 6,
+                    "title": "Pengujian",
+                    "description": "Proses pengecekan ulang dan pengujian untuk memastikan fungsionalitas aplikasi dapat berjalan dengan sempurna."
+                },
+                {
+                    "number": 7,
+                    "title": "Pra Penerapan",
+                    "description": "Proses yang dilakukan dalam persiapan untuk proses penyebaran."
+                },
+                {
+                    "number": 8,
+                    "title": "Penyebaran",
+                    "description": "Proses instalasi aplikasi pada server dan pengguna. Dan aplikasi siap digunakan."
+                },
+                {
+                    "number": 9,
+                    "title": "Garansi Pemeliharaan",
+                    "description": "Memastikan aplikasi terus berfungsi dengan baik, memperbaiki bug yang ditemukan, dan memberikan dukungan teknis kepada pengguna selama masa garansi."
+                },
+                {
+                    "number": 10,
+                    "title": "Selesai",
+                    "description": "Tahap akhir di mana proyek aplikasi dinyatakan selesai, aplikasi akan diserahkan sepenuhnya kepada klien."
+                }
+            ]
+        },
+        "LastBlog": {
+            "title": "Wawasan",
+            "description": "Baca Artikel Terbaru Kami"
+        }
+    },
+    "aboutUs": {
+        "Hero": {
+            "header": "Siapa Kami <br/> Apa yang Mendorong Kami",
+            "description": "Jelajahi bagaimana keahlian kami dapat membantu Anda",
+            "Button": "Mulai Konsulltasi"
+        },
+        "sector": {
+            "header": "Mitra Dalam Visi Anda",
+            "description": "PT. OQB Software House adalah sebuah software house profesional yang menawarkan solusi digital yang terpercaya. Wujudkan efisiensi bisnis dengan layanan terbaik dengan teknologi yang inovatif.<br /> <br /> Kami memberdayakan organisasi untuk membuka potensi mereka dengan mengubah ide-ide visioner menjadi solusi digital yang berdampak dan solusi digital yang berdampak dan berkelanjutan. Kami berusaha untuk menjadi mitra tepercaya dalam memberikan aplikasi perangkat lunak khusus yang mendorong pertumbuhan, mengoptimalkan workflows, and support innovation.",
+            "category": [
+                {
+                    "count": 20,
+                    "sector": "Proyek Perusahaan"
+                },
+                {
+                    "count": 1,
+                    "sector": "Proyek Pemerintahan"
+                },
+                {
+                    "count": 5,
+                    "sector": "Proyek Institusi Pendidikan"
+                }
+            ]
+        },
+        "Client":{
+            "t":"Klien Kami"
+        }
+    },
+    "insight": {
+        "Hero": {
+            "header": "Tetap Terinformasi <br /> Tetap Terdepan",
+            "description": "Temukan tren, tutorial, studi kasus, dan strategi terbaru untuk memajukan bisnis dan teknologi Anda",
+            "Button": "Mulai Konsulltasi"
+        },
+        "CategoryArticle": [
+            {
+                "value":"",
+                "label":"Semua"
+            },
+            {
+                "value":"TechnologyTrend",
+                "label": "Teknologi dan Tren"
+            },
+            {
+                "value":"EducationTrend",
+                "label": "Edukasi dan Tutorial"
+            },
+            {
+                "value":"ProjectCasesStudy",
+                "label": "Proyek Studi Kasus"
+            },
+            {
+                "value":"BusinessTechnologyManagement",
+                "label": "Manajemen Teknologi Bisnis"
+            }
+        ]
+    },
+    "common": {
+        "Testimony": {
+            "header": "Pengalaman Klien",
+            "description": "Setiap proyek lebih dari sekadar tugas; ini adalah kemitraan yang dibangun di atas kepercayaan, kolaborasi, dan tujuan bersama. Testimoni mereka menunjukkan kualitas pekerjaan kami dan kekuatan hubungan kami.",
+            "item": [
+                {
+                    "message": "Aplikasi web baru kami memungkinkan siswa untuk tetap mengikuti pelajaran mereka meskipun mereka tidak bisa berada di kelas. Pendekatan pembelajaran campuran benar-benar membuat siswa tetap terlibat, dan para guru senang dengan kemudahan berbagi materi dan tugas",
+                    "name": "Mulki Siti Hajar Rezaini, M.Pd.",
+                    "position": "Guru SMA Negeri 3 Kota Serang"
+                },
+                {
+                    "message": "Aplikasi yang dikembangkan secara tepat memenuhi kebutuhan mitra. Proyek ini diselesaikan dengan cepat. Kerja bagus!",
+                    "name": "Anggoro Suryo Pramudyo, M.Kom.",
+                    "position": "Sekretaris Penelitian di Kedaireka"
+                },
+                {
+                    "message": "Saya harap kita dapat bekerja sama lagi di proyek-proyek mendatang",
+                    "name": "Danik Mulya Sari, S.Pd.Si.",
+                    "position": "Kepala Sekolah Irsyadul Ibad 2 Pandeglang"
+                },
+                {
+                    "message": "Performanya luar biasa! Hasilnya persis seperti yang saya butuhkan",
+                    "name": "Dicky Lumena",
+                    "position": "Pemilik Netplus Connection"
+                }
+            ]
+        },
+        "ContactForm": {
+            "header": "Kontak Kami",
+            "description": "Kami siap memberikan solusi dan berharap dapat mendiskusikan bagaimana kami dapat membantu",
+            "button": "Kirim"
+        },
+        "Navbar": {
+            "menu": [
+                {
+                    "title": "Beranda",
+                    "href": "/"
+                },
+                {
+                    "title": "Layanan",
+                    "href": "/#services"
+                },
+                {
+                    "title": "Wawasan",
+                    "href": "/insight",
+                    "submenu": [
+                        {
+                            "category": "Teknologi dan Tren"
+                        },
+                        {
+                            "category": "Edukasi dan Tutorial"
+                        },
+                        {
+                            "category": "Proyek Studi Kasus"
+                        },
+                        {
+                            "category": "Manajemen Teknologi Bisnis"
+                        }
+                    ]
+                },
+                {
+                    "title": "Kontak",
+                    "href": "/contact"
+                },
+                {
+                    "title": "Tentang Kami",
+                    "href": "/about-us"
+                }
+            ]
+        },
+        "Footer": {
+            "Services": "Layanan",
+            "Insight": {
+                "t": "Wawasan",
+                "category": [
+                    {
+                        "name": "Teknologi dan Tren",
+                        "href": "/insight"
+                    },
+                    {
+                        "name": "Edukasi dan Tutorial",
+                        "href": "/insight"
+                    },
+                    {
+                        "name": "Proyek Studi Kasus",
+                        "href": "/insight"
+                    },
+                    {
+                        "name": "Manajemen Teknologi Bisnis",
+                        "href": "/insight"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,10 +1,11 @@
 'use client'
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import CardBlog from "@/components/atom/CardBlog"
 // import InputForm from "../atom/InputForm"
 import SearchInput from "../atom/SearcInput"
 import {listBlog} from '@/utils/lib/fetchBlog'
 import ButtonComponent from "../atom/Button"
+import Translate from "@/utils/type/translateType"
 interface Blog {
     id: number;
     title: string;
@@ -18,19 +19,13 @@ interface Blog {
     created_at: string;
     updated_at: string;
 }
-const BlogContainer = () => {
+const BlogContainer:React.FC<{translate:Translate}> = ({translate}) => {
     const [rawData, setRawData] = useState<Blog[]|null>(null)
     const [dataListBlog, setDataListBlog] = useState<Blog[] | null>(null)
     // const [dataFilter, setDataFilter] = useState<Blog[]|null>(null)
     const [searchValue, setSearchValue] = useState<string> ('')
     const [categoryValue, setCategoryValue] = useState<string>('')
-    const categoryOption = [
-        {value:"", label:"All"},
-        {value:"TechnologyTrend", label: "Technology & Trend"}, 
-        {value:"EducationTutorial", label: "Education & Tutorial"}, 
-        {value:"ProjectCasesStudy", label: "Project Case Study"}, 
-        {value:"BusinessTechnologyManagement", label:" Business Technology Management"}
-    ]
+    const categoryOption = translate.insight.CategoryArticle
     const handleSearch = (value:string) => {
         setSearchValue(value)
     }
