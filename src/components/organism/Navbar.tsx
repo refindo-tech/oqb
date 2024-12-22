@@ -82,7 +82,7 @@ const Navbar:React.FC<{translate:Translate}> = ({translate}) => {
                 }
               }}
             >
-              <Link prefetch={true} href={`/${lang}/${item.href}`}>
+              <Link prefetch={true} href={`/${lang}${item.href}`}>
                 <p>{item.title}</p>
               </Link>
               {item.submenu && showDropdown && (
@@ -92,7 +92,7 @@ const Navbar:React.FC<{translate:Translate}> = ({translate}) => {
                       prefetch={true}
                       className="hover:text-greenWhite"
                       key={index}
-                      href={`/insight`}
+                      href={`/${lang}/insight`}
                     >
                       {subitem.category}
                     </Link>

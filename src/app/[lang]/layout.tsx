@@ -18,11 +18,11 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "PT. OQB Software House",
-  description:
-    "PT. OQB Software House merupakan sebuah perusahaan yang berfokus dalam pembuatan perangkat lunak"
-};
+export const metadata:Metadata = {
+  title:"Oqb Software",
+  description:"Jasa pembuatan website, aplikasi mobile & multiplatform. Solusi digital untuk meningkatkan produktivitas bisnis dengan teknologi terkini & tim ahli.",
+  icons:"../../../public/favicon.ico"
+}
 
 export default async function RootLayout({
   children,

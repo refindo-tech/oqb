@@ -9,7 +9,12 @@ import VisionComponent from "@/components/organism/Vision";
 import Benefit from "@/components/organism/Benefit";
 import Translate from "@/utils/type/translateType";
 import { getDictionary } from "./dictionary";
-
+import type { Metadata } from "next";
+export const metadata:Metadata = {
+  title:"Oqb Software",
+  description:"Jasa pembuatan website, aplikasi mobile & multiplatform. Solusi digital untuk meningkatkan produktivitas bisnis dengan teknologi terkini & tim ahli.",
+  icons:"../../../public/favicon.ico"
+}
 const HomePage = async({params}:{params:Promise<{lang: "en" | "id"}>}) => {
   const {lang} = await params 
   const t:Translate = await getDictionary(lang)

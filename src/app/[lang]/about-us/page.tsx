@@ -7,9 +7,20 @@ import ClientSlider from "@/components/organism/ClientSlider";
 import ClientTestimoni from "@/components/organism/ClientTestimoni";
 import Translate from "@/utils/type/translateType";
 import { getDictionary } from "../dictionary";
-const AboutUs = async ({params}:{params:Promise<{lang: "en" | "id"}>}) => {
-  const {lang} =await params 
-  const t:Translate = await getDictionary(lang)
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Software House Profesional | Solusi Transformsi Digital Terpercaya",
+  description:
+    "Software house profesional yang menawarkan solusi digital yang terpercaya. Wujudkan efisiensi bisnis dengan layanan terbaik dengan teknologi yang inovatif.",
+  icons: "../../../public/favicon.ico",
+};
+const AboutUs = async ({
+  params,
+}: {
+  params: Promise<{ lang: "en" | "id" }>;
+}) => {
+  const { lang } = await params;
+  const t: Translate = await getDictionary(lang);
   return (
     <>
       <HeroComponent
@@ -21,7 +32,7 @@ const AboutUs = async ({params}:{params:Promise<{lang: "en" | "id"}>}) => {
         path={`/images/assets/hero/about_us.png`}
       />
       {/* <HeroComponent /> */}
-      <SectorProject translate={t}/>
+      <SectorProject translate={t} />
       <CategoryProject />
       <ClientSlider translate={t} title="Our Clients" />
       <ClientTestimoni translate={t} />

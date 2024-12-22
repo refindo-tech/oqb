@@ -40,7 +40,6 @@ const BlogContent:React.FC<{slug:string}> = ({slug}) => {
     const fetchAPI = async () => {
       const response = await detailBlog({ slug });
       if (response) {
-        console.log(response.data);
         setDataContent(response.data);
       }
     };

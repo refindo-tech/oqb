@@ -17,6 +17,15 @@ function getLocale(req: NextRequest): string {
 export async function middleware(req: NextRequest) {
     // Check if there is any supported locale in the pathname
     const { pathname } = req.nextUrl;
+      // Regex untuk mengecek apakah path berada dalam folder [lang]
+    // const langPathRegex = /^\/[a-z]{2}(\/|$)/; // Contoh: /en/, /id/, dll.
+    // if(!langPathRegex.test(pathname)){
+    //     return NextResponse.next();
+    // }
+    const noLocalePaths = ["/create"]; // Tambahkan folder lainnya di sini
+    if (noLocalePaths.some((prefix) => pathname.startsWith(prefix))) {
+        return NextResponse.next();
+    }
     if (
         req.nextUrl.pathname.startsWith("/_next") || 
         req.nextUrl.pathname.startsWith("/images") ||
