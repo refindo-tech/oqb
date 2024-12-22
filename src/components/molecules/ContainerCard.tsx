@@ -26,7 +26,6 @@ const ContainerCard = () => {
       try {
         const response = await listBlog();
         if (response) {
-          console.log(response)
           setDataListBlog(response.data);
         }
       } catch (error) {

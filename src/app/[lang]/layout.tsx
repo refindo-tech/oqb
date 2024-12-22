@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/organism/Navbar";
+import Footer from "@/components/organism/Footer";
+import { getDictionary } from "./dictionary";
+import WhatsappButton from "@/components/molecules/WhatsappButton";
 import localFont from "next/font/local";
 import "../globals.css";
 
@@ -20,17 +24,24 @@ export const metadata: Metadata = {
     "PT. OQB Software House merupakan sebuah perusahaan yang berfokus dalam pembuatan perangkat lunak"
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params
+}: {
   children: React.ReactNode;
-}>) {
+  params:Promise<{lang:"en"|"id"}>
+}) {
+  const {lang} = await params
+  const t = await getDictionary(lang)
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar translate={t}/>
         {children}
+        <Footer translate={t}/>
+        <WhatsappButton />
       </body>
     </html>
   );

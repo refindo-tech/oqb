@@ -15,15 +15,6 @@ const ServiceOffer: React.FC<{ translate: Translate }> = ({ translate }) => {
         {translate.Home.Services.description}
       </p>
       <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[80%] gap-10 relative">
-        {/* <div className="rounded-lg bg-white shadow-xl h-40 ">
-                    TEXT
-                </div>
-                <div className="rounded-lg bg-white shadow-xl h-40 ">
-                    TEXT
-                </div>
-                <div className="rounded-lg bg-white shadow-xl h-40 ">
-                    TEXT
-                </div> */}
         <CardService
           path="/images/assets/card-image/website.jpg"
           theme={"Website"}

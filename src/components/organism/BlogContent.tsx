@@ -1,8 +1,9 @@
 "use client";
+import React from "react";
 import { useState, useEffect } from "react";
 // import { useRouter } from "next/navigation"
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { detailBlog } from "@/utils/lib/fetchBlog";
 import LastArticle from "@/components/molecules/LastArticle";
 import "react-quill-new/dist/quill.snow.css";
@@ -18,11 +19,11 @@ type dataContent = {
   title: string;
   updated_at: string;
 };
-const BlogContent = () => {
+const BlogContent:React.FC<{slug:string}> = ({slug}) => {
   // const router = useRouter()
-  const path = usePathname();
-  const rawSlug = path.split("/")[2];
-  const slug = decodeURIComponent(rawSlug);
+  // const path = usePathname();
+  // const rawSlug = path.split("/")[2];
+  // const slug = decodeURIComponent(rawSlug);
   const [dataContent, setDataContent] = useState<dataContent>({
     category: "",
     content: "",

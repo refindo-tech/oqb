@@ -1,38 +1,20 @@
-"use client";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import HeroComponent from "@/components/organism/Hero";
-import Navbar from "@/components/organism/Navbar";
 import ServiceOffer from "@/components/organism/ServicesOffer";
 import ClientSlider from "@/components/organism/ClientSlider";
 import ClientTestimoni from "@/components/organism/ClientTestimoni";
 import FormContact from "@/components/organism/FormContact";
 import ProjectPhases from "@/components/organism/StepComponent";
-import Footer from "@/components/organism/Footer";
 import LastBlog from "@/components/organism/LastBlog";
 import VisionComponent from "@/components/organism/Vision";
 import Benefit from "@/components/organism/Benefit";
-import WhatsappButton from "@/components/molecules/WhatsappButton";
-import { getDictionary } from "./dictionary";
 import Translate from "@/utils/type/translateType";
-import en from "../../../public/json/en.json";
+import { getDictionary } from "./dictionary";
 
-const HomePage = () => {
-  const [t, setT] = useState<Translate>(en);
-  const path = usePathname();
-  const local = path.split("/")[1];
-  useEffect(() => {
-    const getLang = async () => {
-      if (local === "id" || local === "en") {
-        const result = await getDictionary(local);
-        setT(result);
-      }
-    };
-    getLang();
-  }, [local, path]);
+const HomePage = async({params}:{params:Promise<{lang: "en" | "id"}>}) => {
+  const {lang} = await params 
+  const t:Translate = await getDictionary(lang)
   return (
     <>
-      <Navbar translate={t}/>
       <HeroComponent
         title={
           <span dangerouslySetInnerHTML={{ __html: t.Home.Hero.header }} />
@@ -55,8 +37,6 @@ const HomePage = () => {
       </div>
       <LastBlog translate={t}/>
       <FormContact translate={t} />
-      <WhatsappButton />
-      <Footer translate={t}/>
     </>
   );
 };
