@@ -21,7 +21,10 @@ const geistMono = localFont({
 export const metadata:Metadata = {
   title:"Oqb Software",
   description:"Jasa pembuatan website, aplikasi mobile & multiplatform. Solusi digital untuk meningkatkan produktivitas bisnis dengan teknologi terkini & tim ahli.",
-  icons:"../../../public/favicon.ico"
+  icons:{
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico"
+  }
 }
 
 export default async function RootLayout({
