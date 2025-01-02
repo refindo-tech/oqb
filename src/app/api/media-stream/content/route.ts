@@ -7,14 +7,17 @@ import db from '@/utils/helpers/db'
 export async function GET(req: NextRequest) {
     const responseHeaders = new Headers(req.headers)
     const requestURL = new URL(req.url).searchParams
-    const getPath = requestURL.get('path')
-    if (getPath) {
+    const filePath = requestURL.get('path')
+    if (filePath) {
         const result = await db.blog.findMany({
-            where: { thumbnail: getPath }
+            where: { thumbnail: filePath }
         })
+        const nameFile = filePath.split('/').pop()
+        if(!nameFile) return NextResponse.json({ message: 'Image not found' }, { status: 404 });
+        const extensionFile = nameFile.split('.').pop()
         if (result) {
-            responseHeaders.set('Content-Type', 'image/jpg')
-            const absolutePath = path.join(process.cwd(), 'public', getPath)
+            responseHeaders.set('Content-Type', `image/${extensionFile}`)
+            const absolutePath = path.join(process.cwd(), 'public', filePath)
             const stream: ReadStream = createReadStream(`${absolutePath}`)
             return new Response( stream as unknown as ReadableStream, { headers: responseHeaders });
         } else {

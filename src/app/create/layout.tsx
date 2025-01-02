@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
 
-
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -18,10 +17,10 @@ export const metadata: Metadata = {
   title: "PT. OQB Software House",
   description:
     "PT. OQB Software House merupakan sebuah perusahaan yang berfokus dalam pembuatan perangkat lunak",
-  icons:{
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico"
-  }
+  // icons:{
+  //   icon: "/images/favicon.ico",
+  //   shortcut: "/images/favicon.ico"
+  // }
 };
 
 export default function RootLayout({
