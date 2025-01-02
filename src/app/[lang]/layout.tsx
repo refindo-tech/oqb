@@ -6,7 +6,6 @@ import WhatsappButton from "@/components/molecules/WhatsappButton";
 import localFont from "next/font/local";
 import "../globals.css";
 
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -18,29 +17,33 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata:Metadata = {
-  title:"Oqb Software",
-  description:"Jasa pembuatan website, aplikasi mobile & multiplatform. Solusi digital untuk meningkatkan produktivitas bisnis dengan teknologi terkini & tim ahli.",
-  icons:"../../../public/favicon.ico"
-}
+export const metadata: Metadata = {
+  title: "Oqb Software",
+  description:
+    "Jasa pembuatan website, aplikasi mobile & multiplatform. Solusi digital untuk meningkatkan produktivitas bisnis dengan teknologi terkini & tim ahli.",
+  // icons:{
+  //   icon: "/images/favicon.ico",
+  //   shortcut: "/images/favicon.ico"
+  // }
+};
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
-  params:Promise<{lang:"en"|"id"}>
+  params: Promise<{ lang: "en" | "id" }>;
 }) {
-  const {lang} = await params
-  const t = await getDictionary(lang)
+  const { lang } = await params;
+  const t = await getDictionary(lang);
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar translate={t}/>
+        <Navbar translate={t} />
         {children}
-        <Footer translate={t}/>
+        <Footer translate={t} />
         <WhatsappButton />
       </body>
     </html>

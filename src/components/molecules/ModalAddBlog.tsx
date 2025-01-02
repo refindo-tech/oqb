@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import InputForm from "../atom/InputForm";
 import { createBlog } from "@/utils/lib/fetchBlog";
 import SelectInput from "../atom/SelectInput";
+import Image from "next/image";
 const QuillEditor = dynamic(() => import("@/components/molecules/RichText"), {
   ssr: false,
 });
@@ -16,7 +17,7 @@ type dataRequest = {
   thumbnail: string | number | null;
   content: string | number | null;
   slug: string | number | null;
-  category:string
+  category: string;
 };
 import "react-quill-new/dist/quill.snow.css";
 interface propsModalAddBlog {
@@ -31,17 +32,14 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
   const [descriptionValue, setDescriptionValue] = useState<
     string | number | null
   >("");
-  const [titleValue, setTitleValue] = useState<string | number | null>(
+  const [titleValue, setTitleValue] = useState<string | number | null>("");
+  const [thumbnailValue, setThumbnailValue] = useState<string | number | null>(
     ""
   );
-  const [thumbnailValue, setThumbnailValue] = useState<
-    string | number | null
-  >("");
   const [slugValue, setSlugValue] = useState<string>("");
   const [isLoad, setIsLoad] = useState<boolean>(false);
-  const [dataRequest, setDataRequest] = useState<dataRequest|string
-  >("");
-  const [category, setCategoryValue] = useState<string>("TechnologyTrend")
+  const [dataRequest, setDataRequest] = useState<dataRequest | string>("");
+  const [category, setCategoryValue] = useState<string>("TechnologyTrend");
   const handleContentChange = (value: string) => {
     setContent(value);
   };
@@ -54,25 +52,22 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
   const handleThumbnail = (value: string | number | null) => {
     setThumbnailValue(value);
   };
-  const handleCategoryValue = (value:string) => {
-    setCategoryValue(value)
-  }
-  // const handleDataRequest = (content: dataRequest) => {
-  //   setDataRequest(content);
-  // };
+  const handleCategoryValue = (value: string) => {
+    setCategoryValue(value);
+  };
   const handleIsLoad = (value: boolean) => {
     setIsLoad(value);
   };
   const handleCreateBlog = async (payload: dataRequest | string) => {
     const response = await createBlog(payload);
     if (response) {
-      handleIsLoad(false)
-      handleModal()
+      handleIsLoad(false);
+      handleModal();
     }
   };
   useEffect(() => {
     const handleSlugValue = () => {
-      const lower = String(titleValue).toLowerCase().replaceAll(' ','-');
+      const lower = String(titleValue).toLowerCase().replaceAll(" ", "-");
       setSlugValue(lower);
     };
     handleSlugValue();
@@ -86,12 +81,16 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
       description: descriptionValue,
       thumbnail: thumbnailValue,
       content: content,
-      category: category
+      category: category,
     });
-  }, [descriptionValue, titleValue, thumbnailValue, content, slugValue, category]);
-  // useEffect(()=>{
-  //   console.log(dataRequest)
-  // },[dataRequest])
+  }, [
+    descriptionValue,
+    titleValue,
+    thumbnailValue,
+    content,
+    slugValue,
+    category,
+  ]);
   const resetValue = () => {
     setDataRequest("");
   };
@@ -117,7 +116,7 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
                 }
               />
             </div>
-            <div className="bg-white rounded-lg flex flex-col flex-grow gap-5 overflow-y-scroll px-2">
+            <div className="bg-white rounded-lg flex flex-col flex-grow gap-5 overflow-y-scroll px-2 hide-scrollbar">
               <InputForm
                 label={true}
                 type="text"
@@ -134,21 +133,41 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
                 handleValue={handleDescriptionValue}
                 placeholder="Masukan deskripsi artikel"
               />
-              <InputForm
-                label={true}
-                type="file"
-                name="Thumbnail"
-                value={thumbnailValue}
-                handleValue={handleThumbnail}
-              />
-              <SelectInput value={category} handleValue={handleCategoryValue}/>
-              <h1>Quill Editor Example</h1>
-              <div>
+              {thumbnailValue ? (
+                <div className="flex flex-col gap-1">
+                  <p className="font-poppins font-semibold">Thumbnail</p>
+                  <div className="relative h-[250px] md:h-[350px] lg:h-[400px] w-full rounded-lg">
+                    <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 rounded-lg">
+                      <Image
+                        src={`/api/media-stream/content?path=${thumbnailValue}`}
+                        alt="thumbnail image"
+                        fill
+                        sizes="100vw"
+                        style={{
+                          objectFit: "cover", // Menyesuaikan ukuran gambar tanpa crop
+                          borderRadius: "8px",
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <InputForm
+                  label={true}
+                  type="file"
+                  name="Thumbnail"
+                  value={thumbnailValue}
+                  handleValue={handleThumbnail}
+                />
+              )}
+              <SelectInput value={category} handleValue={handleCategoryValue} />
+              <div className="flex flex-col gap-1">
+                <p className="font-poppins font-semibold">Tulis Konten:</p>
                 <QuillEditor value={content} onChange={handleContentChange} />
               </div>
               <ButtonComponent
                 onClick={() => {
-                  handleIsLoad(true)
+                  handleIsLoad(true);
                   // handleDataRequest({
                   //   title: titleValue,
                   //   description: descriptionValue,
@@ -156,15 +175,17 @@ const ModalAddBlog: React.FC<propsModalAddBlog> = ({
                   //   content: content,
                   //   slug:slugValue
                   // });
-                  handleCreateBlog(dataRequest)
+                  handleCreateBlog(dataRequest);
                 }}
                 content={
-                  <>{isLoad ? 
-                    <div className="w-full flex justify-center items-center">
-                      <div className="loader"></div>
-                    </div>
-                  : 
-                  <div className="font-semibold">Submit</div>}
+                  <>
+                    {isLoad ? (
+                      <div className="w-full flex justify-center items-center">
+                        <div className="loader"></div>
+                      </div>
+                    ) : (
+                      <div className="font-semibold">Submit</div>
+                    )}
                   </>
                 }
                 propsClass="bg-orange-500 text-navy p-2 rounded-xl"

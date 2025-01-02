@@ -1,4 +1,6 @@
-import Image from "next/image";
+import dynamic from "next/dynamic";
+// import Image from "next/image";
+const Image = dynamic(() => import("next/image"), { ssr: false });
 import Link from "next/link";
 import React from "react";
 
@@ -25,7 +27,9 @@ const CardBlog: React.FC<propsCardBlog> = ({
         {/* Wrapper untuk memastikan efek zoom tidak keluar */}
         <div className="w-full h-full relative rounded-lg">
           <Image
-            src={`${thumbnail}`}
+            src={`/api/media-stream/content?path=${thumbnail}`}
+            // overrideSrc={thumbnail}
+            // unoptimized
             alt="thumbnail-card"
             fill
             // sizes="100vw"

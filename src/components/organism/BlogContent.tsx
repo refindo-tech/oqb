@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 // import { useRouter } from "next/navigation"
-import Image from "next/image";
+// import Image from "next/image";
+const Image = dynamic(() => import("next/image"), { ssr: false });
 // import { usePathname } from "next/navigation";
 import { detailBlog } from "@/utils/lib/fetchBlog";
 import LastArticle from "@/components/molecules/LastArticle";
@@ -19,7 +21,7 @@ type dataContent = {
   title: string;
   updated_at: string;
 };
-const BlogContent:React.FC<{slug:string}> = ({slug}) => {
+const BlogContent: React.FC<{ slug: string }> = ({ slug }) => {
   // const router = useRouter()
   // const path = usePathname();
   // const rawSlug = path.split("/")[2];
@@ -53,7 +55,9 @@ const BlogContent:React.FC<{slug:string}> = ({slug}) => {
             <div className="relative h-[250px] md:h-[350px] lg:h-[400px] mb-5">
               <div className="absolute rounded-lg shadow-xl h-full w-full">
                 <Image
-                  src={dataContent.thumbnail}
+                  src={`/api/media-stream/content?path=${dataContent.thumbnail}`}
+                  // overrideSrc={dataContent.thumbnail}
+                  // unoptimized
                   alt={dataContent.title}
                   fill // Menyebarkan gambar sepenuhnya
                   sizes="100vw" // Untuk responsivitas optimal

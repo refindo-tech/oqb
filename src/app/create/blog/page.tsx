@@ -35,16 +35,6 @@ const CreateBlog = () => {
         />
       </div>
       <ModalAddBlog isModal={isModal} handleModal={handleModalAddBlog}/>
-      {/* <div className="bg-gray-200 rounded-lg p-3">
-        <h1>Quill Editor Example</h1>
-        <QuillEditor value={content} onChange={handleContentChange} />
-        <h2>Preview:</h2>
-        <div
-        className="ql-editor"
-          dangerouslySetInnerHTML={{ __html: content }} // Tampilkan konten editor sebagai HTML
-        />
-      </div> */}
-        {/* <div>{content}</div> */}
     </div>
   );
 };
