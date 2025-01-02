@@ -17,7 +17,6 @@ function getLocale(req: NextRequest): string {
 export async function middleware(req: NextRequest) {
     // Check if there is any supported locale in the pathname
     const { pathname } = req.nextUrl;
-    console.log(pathname)
       // Regex untuk mengecek apakah path berada dalam folder [lang]
     // const langPathRegex = /^\/[a-z]{2}(\/|$)/; // Contoh: /en/, /id/, dll.
     // if(!langPathRegex.test(pathname)){

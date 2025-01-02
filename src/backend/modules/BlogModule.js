@@ -1,78 +1,79 @@
 import db from "../../utils/helpers/db";
+import slugify from "slugify";
 class Blog {
-    listBlog = async () =>{
+    listBlog = async () => {
         try {
             const getListBlog = await db.blog.findMany({
-                orderBy:{created_at:'desc'}
+                orderBy: { created_at: 'desc' }
             })
-            return{
-                code:200,
+            return {
+                code: 200,
                 message: "Get List Blog Success",
-                data:getListBlog
+                data: getListBlog
             }
         } catch (error) {
             console.log(error)
             return {
-                code:500,
+                code: 500,
                 message: "Blog Module List Blog Error"
             }
         }
     }
-    createBlog = async(req) =>{
+    createBlog = async (req) => {
         try {
-            console.log(req)
-            const {title, slug, description, thumbnail, content, category} = req 
+            const { title, description, thumbnail, content, category } = req
+            const slug = slugify(title, { lower: true, replacement: '-', strict:true, trim: true })
             const addBlog = await db.blog.create({
-                data:{
+                data: {
                     title,
-                    slug:decodeURIComponent(slug),
+                    slug: decodeURIComponent(slug),
                     description,
                     thumbnail,
                     content,
                     category
                 }
             })
-            if(addBlog){
-                return{
-                    code:200,
-                    message:"Create Blog Success"
+            if (addBlog) {
+                return {
+                    code: 200,
+                    message: "Create Blog Success"
                 }
             }
         } catch (error) {
             console.log(error)
             return {
-                code:500,
+                code: 500,
                 message: "Blog Module Create Blog Error"
             }
         }
     }
-    detailBlog = async(req) =>{
+    detailBlog = async (req) => {
         try {
-            const {slug} = req
-            console.log('Detail Blog Module',slug)
+            const { slug } = req
+            console.log('Detail Blog Module', slug)
             const getBlog = await db.blog.findFirst({
-                where:{
-                    slug:slug
+                where: {
+                    slug: slug
                 }
             })
-            if(getBlog){
+            if (getBlog) {
                 return {
-                    code:200,
-                    message:'Get Detail Blog Success',
-                    data:getBlog
+                    code: 200,
+                    message: 'Get Detail Blog Success',
+                    data: getBlog
                 }
             }
-            else{
+            else {
                 return {
-                    code:404,
-                    message:'Blog Not Found',
+                    code: 404,
+                    message: 'Blog Not Found',
                 }
             }
         } catch (error) {
-            console.log('Error Blog Module Detail Blog',error)
-            return{
-                code:500,
-                message:'Error when get detail blog'
+            console.log('Error Blog Module Detail Blog', error)
+            return {
+                code: 500,
+                message: 'Error when get detail blog'
             }
         }
     }
