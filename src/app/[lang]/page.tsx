@@ -13,7 +13,6 @@ import type { Metadata } from "next";
 export const metadata:Metadata = {
   title:"Oqb Software",
   description:"Jasa pembuatan website, aplikasi mobile & multiplatform. Solusi digital untuk meningkatkan produktivitas bisnis dengan teknologi terkini & tim ahli.",
-  icons:"../../../public/favicon.ico"
 }
 const HomePage = async({params}:{params:Promise<{lang: "en" | "id"}>}) => {
   const {lang} = await params 
