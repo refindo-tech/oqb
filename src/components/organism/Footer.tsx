@@ -42,12 +42,12 @@ const Footer: React.FC<{ translate: Translate }> = ({ translate }) => {
               {translate.common.Footer.Services}
             </h5>
             <div className="flex flex-col gap-1 text-white/70">
-              <Link href={`${lang}/#services`}>Website Design & Development</Link>
-              <Link href={`${lang}/#services`}>Mobile App Design & Development</Link>
-              <Link href={`${lang}/#services`}>
+              <Link href={`/${lang}/#services`}>Website Design & Development</Link>
+              <Link href={`/${lang}/#services`}>Mobile App Design & Development</Link>
+              <Link href={`/${lang}/#services`}>
                 Multiplatform App Design & Development
               </Link>
-              <Link href={`${lang}/#services`}>System Integration</Link>
+              <Link href={`/${lang}/#services`}>System Integration</Link>
             </div>
           </div>
           <div
@@ -59,7 +59,7 @@ const Footer: React.FC<{ translate: Translate }> = ({ translate }) => {
             </h5>
             <div className="flex flex-col gap-1">
               {translate.common.Footer.Insight.category.map((item, index) => (
-                <Link href={`/${lang}/${item.href}`} className="font-semibold" key={index}>
+                <Link href={`/${lang}${item.href}`} className="font-semibold" key={index}>
                   {item.name}
                 </Link>
               ))}

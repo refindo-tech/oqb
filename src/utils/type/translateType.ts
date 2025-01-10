@@ -59,6 +59,13 @@ export default interface Translate {
         },
         CategoryArticle: Array<{ value: string; label: string;}>
     },
+    contact:{
+        Hero: {
+            header: string,
+            description: string,
+            Button: string
+        },
+    },
     common: {
         Testimony: {
             header: string;

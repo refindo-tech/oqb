@@ -16,10 +16,10 @@ const Contact = async({params}:{params:Promise<{lang: "en" | "id"}>}) => {
     <>
       <HeroComponent
         title={
-          <span dangerouslySetInnerHTML={{ __html: t.Home.Hero.header }} />
+          <span dangerouslySetInnerHTML={{ __html: t.contact.Hero.header }} />
         }
-        description={t.Home.Hero.description}
-        contentButton={t.Home.Hero.Button}
+        description={t.contact.Hero.description}
+        contentButton={t.contact.Hero.Button}
         path={`/images/assets/hero/contact.png`}
       />
       <FormContact translate={t} />
