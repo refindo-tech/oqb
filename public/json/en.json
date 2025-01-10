@@ -156,6 +156,13 @@
             }
         ]
     },
+    "contact":{
+        "Hero": {
+            "header": "Let’s Start Something Great Together",
+            "description": "Reach out to OQB today and let’s discuss how we can bring your ideas to life",
+            "Button": "Start Consultation"
+        }
+    },
     "common": {
         "Testimony": {
             "header": "Clients Experiences",

@@ -107,7 +107,7 @@
         },
         "sector": {
             "header": "Mitra Dalam Visi Anda",
-            "description": "PT. OQB Software House adalah sebuah software house profesional yang menawarkan solusi digital yang terpercaya. Wujudkan efisiensi bisnis dengan layanan terbaik dengan teknologi yang inovatif.<br /> <br /> Kami memberdayakan organisasi untuk membuka potensi mereka dengan mengubah ide-ide visioner menjadi solusi digital yang berdampak dan solusi digital yang berdampak dan berkelanjutan. Kami berusaha untuk menjadi mitra tepercaya dalam memberikan aplikasi perangkat lunak khusus yang mendorong pertumbuhan, mengoptimalkan workflows, and support innovation.",
+            "description": "PT. OQB Software House adalah sebuah software house profesional yang menawarkan solusi digital yang terpercaya. Wujudkan efisiensi bisnis dengan layanan terbaik dengan teknologi yang inovatif.<br /> <br /> Kami memberdayakan organisasi untuk membuka potensi mereka dengan mengubah ide-ide visioner menjadi solusi digital yang berdampak dan berkelanjutan. Kami berusaha untuk menjadi mitra tepercaya dalam memberikan aplikasi perangkat lunak khusus yang mendorong pertumbuhan, mengoptimalkan workflows, and support innovation.",
             "category": [
                 {
                     "count": 20,
@@ -155,6 +155,13 @@
                 "label": "Manajemen Teknologi Bisnis"
             }
         ]
+    },
+    "contact":{
+        "Hero": {
+            "header": "Mari Bersama Memulai Sesuatu yang Hebat",
+            "description": "Hubungi OQB hari ini dan mari kita bahas bagaimana kami dapat mewujudkan ide-ide Anda",
+            "Button": "Mulai Konsulltasi"
+        }
     },
     "common": {
         "Testimony": {
