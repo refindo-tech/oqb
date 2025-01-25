@@ -33,7 +33,8 @@ export async function middleware(req: NextRequest) {
         req.nextUrl.pathname.startsWith("/api") ||
         req.nextUrl.pathname.startsWith("/favicon.ico") ||
         req.nextUrl.pathname.startsWith("/sitemap.xml") ||
-        req.nextUrl.pathname.startsWith("/robots.txt")
+        req.nextUrl.pathname.startsWith("/robots.txt") ||
+        req.nextUrl.pathname.startsWith("/ads.txt")
     ) return NextResponse.next();
     const pathnameHasLocale = locales.some(
         (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
