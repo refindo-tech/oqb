@@ -36,7 +36,7 @@ const LastArticle = () => {
       <h3 className="font-bold font-roboto text-center text-3xl p-4 w-full rounded-t-xl text-white bg-blueWhite/10">
         Last Article
       </h3>
-      <div className="w-full p-5 gap-3 bg-[#00224D] flex-grow flex flex-col justify-between font-poppins">
+      <div className="w-full p-5 gap-3 bg-[#00224D] flex-grow flex flex-col justify-between font-poppins rounded-b-xl">
         {dataListBlog?.map((item, index) => (
           <Link
             prefetch={true}
