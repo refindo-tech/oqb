@@ -4,6 +4,7 @@ import Footer from "@/components/organism/Footer";
 import { getDictionary } from "./dictionary";
 import WhatsappButton from "@/components/molecules/WhatsappButton";
 import localFont from "next/font/local";
+import AdsenseScript from "@/components/atom/AdsenseScript";
 import "../globals.css";
 
 const geistSans = localFont({
@@ -38,6 +39,9 @@ export default async function RootLayout({
   const t = await getDictionary(lang);
   return (
     <html lang="en">
+      <head>
+      <AdsenseScript id={`${process.env.NEXT_PUBLIC_ID_CLIENT_ADSENSE}`} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
