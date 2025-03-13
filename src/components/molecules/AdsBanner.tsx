@@ -7,14 +7,18 @@ const AdsBanner = () => {
     </script> */
   }
     useEffect(() => {
-    const ads = document.getElementsByClassName("adsbygoogle").length;
-    for (let i = 0; i < ads; i++) {
-        try {
-            ((window as unknown as { adsbygoogle: unknown[] }).adsbygoogle || []).push({});
-        } catch (e: unknown) {
-            console.log(e);
+        const ads = document.getElementsByClassName("adsbygoogle");
+        for (let i = 0; i < ads.length; i++) {
+            const ad = ads[i] as HTMLElement;
+            // Cek apakah elemen sudah diinisialisasi
+            if (!ad.hasAttribute("data-ad-status")) {
+                try {
+                    ((window as unknown as { adsbygoogle: unknown[] }).adsbygoogle || []).push({});
+                } catch (e) {
+                    console.error(e);
+                }
+            }
         }
-    }
     }, []);
     return (
     <ins
