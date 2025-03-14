@@ -22,7 +22,7 @@ export async function middleware(req: NextRequest) {
     // if(!langPathRegex.test(pathname)){
     //     return NextResponse.next();
     // }
-    const noLocalePaths = ["/create"]; // Tambahkan folder lainnya di sini
+    const noLocalePaths = ["/create", "/auth"]; // Tambahkan folder lainnya di sini
     if (noLocalePaths.some((prefix) => pathname.startsWith(prefix))) {
         return NextResponse.next();
     }
