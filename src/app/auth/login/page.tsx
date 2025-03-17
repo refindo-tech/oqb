@@ -62,7 +62,6 @@ const LoginPage = () => {
       },
     });
     const submitLogin: SubmitHandler<dataRequest> = (data) => {
-        console.log(data);
         const {email, password} = data
         const form = new FormData()
         form.append("email", email)
@@ -86,7 +85,7 @@ const LoginPage = () => {
               placeholder="Please input your email"
               className="border-2 border-gray-500 h-12 p-5 rounded-2xl"
             />
-            <p className="text-cherryRed">{errors.email?.message}</p>
+            <p className="text-xs text-cherryRed">{errors.email?.message}</p>
           </div>
           <div className="flex flex-col gap-1">
             <label htmlFor="pasword">Password:</label>
@@ -105,7 +104,7 @@ const LoginPage = () => {
                 {typePassword ? <EyeIcon /> : <EyeCloseIcon />}
               </button>
             </div>
-            <p className="text-cherryRed">{errors.password?.message}</p>
+            <p className="text-xs text-cherryRed">{errors.password?.message}</p>
           </div>
           <button
             type="submit"
